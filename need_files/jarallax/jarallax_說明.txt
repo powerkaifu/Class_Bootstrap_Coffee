@@ -1,0 +1,12 @@
+官方網站:http://www.jarallax.com/
+
+
+使用方式
+1.要視差的物件要接在<body>下方
+2.<body onload="init()">，body要有onload="init()"
+3.設定CSS視差物件的位置
+4.設店jarallax.js與animations.js
+5.animations.js是控制視差物件的進度
+
+
+目錄 demo 為範例檔

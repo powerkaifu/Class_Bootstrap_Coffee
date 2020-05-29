@@ -1,566 +1,1153 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>泰山咖啡莊園</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <!-- FontAwesome CSS -->
-        <link rel="stylesheet" href="css/fontawesome.css" />
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-        <!-- 
-            magnific-popup CSS 
-            為彈出光箱的 CSS
-            有兩支，分為解壓縮後的主要css & 網站上需 download 個別的css
-        -->
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-        <link rel="stylesheet" href="css/magnific-popup-single.css" />
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <title>泰山咖啡莊園 - Coding的好地方</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.css" />
 
-        <link rel="stylesheet" href="css/animate.css" />
-        <!-- My Style CSS -->
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <!-- 
-        教學方向
-        1. 製作時註解結構須清楚。
+      <!-- Favicon -->
+      <!-- http://tw.faviconico.org/ -->
+      <link rel="shortcut icon" href="images/favicon.ico" />
 
-     -->
-    <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="700">
-        <!--
-            Loading 效果 
-            justify-content 可以控制 loading-bar 的延伸方向，center 會兩側延神 
-        -->
-        <div class="loading-bar vh-100 vw-100 d-flex justify-content-center align-items-center">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-coffee3" style="height:1rem;font-size:1rem;"></div>
-        </div>
-        <div class="container-fluid p-0">
-            <!-- 導覽列區 ------------------------------------------------------------------------------------------- -->
-            <header class="navbar navbar-expand-lg navbar-dark bg-coffee1 fixed-top">
-                <a class="navbar-brand" href="#section01"><img src="images/logo.png" alt="東山咖啡館" width="40"/></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+      <!-- FontAwesome CSS -->
+      <link rel="stylesheet" href="css/fontawesome.min.css" />
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto menu-left">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#section01"><i class="fas fa-home mr-1"></i>回首頁</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section02"><i class="fas fa-hamburger mr-1"></i>各式餐飲</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section03"><i class="fas fa-bus mr-1"></i>泰山景點</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section04"><i class="fas fa-map-marked-alt mr-1"></i>莊園位置</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section05"><i class="fas fa-envelope mr-1"></i>聯絡我們</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section06" data-toggle="modal" data-target="#myModal"><i class="fas fa-coffee mr-1"></i>咖啡故事</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" />
-                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">搜尋</button>
-                    </form>
-                </div>
-            </header>
+      <!-- magnific-popup CSS 
+        為彈出光箱的 CSS 需要兩支，分為解壓縮後的主要 css & 網站上需 download 個別的css -->
+      <link rel="stylesheet" href="css/magnific-popup.css" />
+      <link rel="stylesheet" href="css/magnific-popup-single.css" />
 
-            <!-- 輪播圖區 section01 --------------------------------------------------------------------------------- -->
-            <section id="section01" class="vh-lg-100 mt-5 mt-lg-0">
-                <div id="carouselExampleIndicators" class="carousel slide vh-lg-100" data-ride="carousel" data-interval="5000">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    </ol>
-                    <div class="carousel-inner vh-lg-100">
-                        <div class="carousel-item active">
-                            <img src="images/carousel_01.jpg" class="d-block w-100" alt="輪播圖01" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/carousel_02.jpg" class="d-block w-100" alt="輪播圖02" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/carousel_03.jpg" class="d-block w-100" alt="輪播圖03" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/carousel_04.jpg" class="d-block w-100" alt="輪播圖04" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/carousel_05.jpg" class="d-block w-100" alt="輪播圖05" />
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </section>
-            <!-- 各式餐飲 section02 --------------------------------------------------------------------------------- -->
-            <section id="section02" class="vh-lg-100 bg-coffee1">
-                <div class="container h-100 d-lg-flex flex-lg-column justify-content-lg-center">
-                    <h1 class="text-center text-white pt-3 pb-lg-4">各式餐飲</h1>
-                    <div class="row">
-                        <div class="col-lg-4 my-3">
-                            <div class="card">
-                                <img src="images/section02_01.jpg" class="card-img-top" />
-                                <div class="card-body">
-                                    <h5 class="card-title">咖啡飲品</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card
-                                        title
-                                    </p>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="#" class="btn btn-coffee text-white btn-block">我要點餐</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 my-3">
-                            <div class="card h-100">
-                                <img src="images/section02_02.jpg" class="card-img-top" />
-                                <div class="card-body">
-                                    <h5 class="card-title">蛋糕點心</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="#" class="btn btn-coffee text-white btn-block">我要點餐</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 my-3">
-                            <div class="card h-100">
-                                <img src="images/section02_03.jpg" class="card-img-top" />
-                                <div class="card-body">
-                                    <h5 class="card-title">義大利麵</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <a href="#" class="btn btn-coffee text-white btn-block">我要點餐</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- 交通景點 section03 --------------------------------------------------------------------------------- -->
-            <section id="section03" class="bg-coffee2 p-3 p-lg-5">
-                <div class="container">
-                    <h1 class="text-center text-white p-lg-4 text-dark">泰山景點</h1>
-                    <ul class="list-unstyled">
-                        <li class="media bg-white rounded p-2">
-                            <a class="image-popup-no-margins" href="images/view01.jpg">
-                                <img src="images/view01_s.jpg" class="mr-3 w-75" alt="頂泰山巖" />
-                            </a>
-                            <div class="media-body">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item h5 mb-0">頂泰山巖</li>
-                                </ol>
-                                <p>
-                                    頂泰山巖建於清乾隆十九年（1754年），由仕紳李序彥、李序原等所捐建，
-                                    自福建省泉州府安溪縣彭內莊分香泰山顯應祖師神像來臺，原名「福山巖」，頂泰山巖坐西北朝東南，通寬九開間兩進兩廊兩護龍。前殿採石雕牆堵，蟠龍柱牆面石雕皆昭和期的臺灣建築風格。前殿為重檐硬山式，兩側山門則為重檐歇山形式，
-                                    使宛若三座並排之廟宇。因位於崎仔腳山腰上，故又名「崎仔腳廟」，後該廟又分靈出另一座位於山下明志路上的泰山巖，為分別兩座「泰山巖」，故頂泰山巖又稱為「崎仔腳老祖廟」、「頂廟」。
-                                </p>
-                            </div>
-                        </li>
-                        <li class="media my-4 bg-white rounded p-2">
-                            <a class="image-popup-no-margins" href="images/view02.jpg">
-                                <img src="images/view02_s.jpg" class="mr-3" alt="明志書院" />
-                            </a>
-                            <div class="media-body">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item h5 mb-0">明志書院</li>
-                                </ol>
-                                <p>
-                                    明志書院，為臺灣北部的書院，文風冠於北臺，號稱「北臺首學」。原為一所書院，1761年（清乾隆26年），來自福建汀州的貢生胡焯猷，捐設土地設於興直堡新莊的「山腳」，亦即今日新北市泰山區。隨著1781年淡水廳廳治在竹塹（今日臺灣新竹市），官紳們將明志書院遷建於竹塹，故分兩時期為「泰山明志書院」與「竹塹明志書院」（新竹明志書院）。竹塹明志書院原址[1]位於新竹關帝廟之西內天后宮以南（今日西大路與西門街交會點處），已在日治時期拆毀。
-                                    胡焯猷的義舉，造就臺灣大甲溪以北第一個書院的誕生，尤其在公家的淡水廳儒學遲至半個世紀（五十四年後，嘉慶二十二年，1817年）後才設立的情況下，明志書院更是發揮了「民間教育」的宗旨。
-                                </p>
-                            </div>
-                        </li>
-                        <li class="media bg-white rounded p-2">
-                            <a class="image-popup-no-margins" href="images/view03.jpg">
-                                <img src="images/view03_s.jpg" class="mr-3" alt="辭修公園" />
-                            </a>
-                            <div class="media-body">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item h5 mb-0">辭修公園</li>
-                                </ol>
-                                <p>
-                                    辭修公園，前名「陳誠紀念公園」，位於臺灣新北市泰山區同榮里尖凍山丘陵，佔地5.5公頃，原為中華民國故副總統陳誠與夫人譚祥的合葬墓園，1995年陳家後人將遺骨遷葬至高雄縣大樹鄉（今高雄市大樹區）佛光山萬壽園納骨塔[1]，該園交由泰山鄉公所管理，墓園經過改建更名為辭修公園。辭修公園整座公園設立在面向臺北盆地的山坡上，是林口臺地陡降丘陵的一部份[4]，由入口處向公園內部仰望，兩百多階的中央石階通往中央雕像平臺。平臺面向臺北盆地，視野廣闊，並立有紀念石碑，記述陳誠生平事蹟及蔣中正褒揚石碑[1]。
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- 地圖位置 section04 --------------------------------------------------------------------------------- -->
-            <section id="section04" class="vh-lg-100 bg-coffee1 pb-4">
-                <div class="container h-100 d-lg-flex flex-lg-column justify-content-lg-center">
-                    <h1 class="text-center text-white py-4">地圖位置</h1>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7082070567467!2d121.41715191500651!3d25.043974683967754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1563795604172!5m2!1szh-TW!2stw"
-                            width="600"
-                            height="450"
-                            frameborder="0"
-                            style="border:0"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                </div>
-            </section>
-            <!-- 聯絡我們 section05 --------------------------------------------------------------------------------- -->
-            <section id="section05" class="vh-lg-100 bg-coffee2">
-                <div class="container table-responsive">
-                    <h1 class="text-center text-coffee1 py-4">聯絡我們</h1>
-                    <form class="needs-validation" novalidate>
-                        <table class="table table-light table-hover table-striped">
-                            <tr>
-                                <td>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlInput1">姓名</label>
-                                        <input id="name" type="input" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            請輸入姓名
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlInput1">電話號碼</label>
-                                        <input id="tel" type="tel" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            請輸入電話號碼
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlInput1">電子郵件</label>
-                                        <input id="email" type="email" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            請輸入電子郵件
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">留言訊息</label>
-                                        <textarea id="message" class="form-control" rows="3" required></textarea>
-                                        <div class="invalid-feedback">
-                                            請輸入留言訊息
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <button type="submit" class="btn btn-coffee" data-toggle="tooltip" title="送出" data-content="彈出訊息，送出內容">送出</button>
-                                    <button type="reset" class="btn btn-coffee" data-toggle="tooltip" title="重設" data-content="彈出訊息，重設內容">重設</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </section>
-            <!-- 咖啡故事 section06 --------------------------------------------------------------------------------- -->
-            <div id="myModal" class="modal fade" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="aboutCoffee">關於咖啡</h5>
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- 關於咖啡的內容 -->
-                            <div class="row">
-                                <!-- scrollspy id -->
-                                <ul id="scrollspy" class="col-12 row justify-content-around nav nav-pills my-2">
-                                    <li class="nav-item">
-                                        <a class="nav-link active disabled" href="#coffee1">咖啡起源</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link disabled" href="#coffee2">咖啡好處</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link disabled" href="#coffee3">咖啡壞處</a>
-                                    </li>
-                                </ul>
-                                <!--
-                                                內容要有 data-spy、data-target、data-offset
-                                                data-spy 固定為 scroll
-                                                data-target 為要偵測的選單 id
-                                                datat-offset 為距離多少觸發偵測
-                                            -->
-                                <ul
-                                    class="col-12 list-unstyled overflow-auto row justify-content-lg-center"
-                                    data-spy="scroll"
-                                    data-target="#scrollspy"
-                                    data-offset="10"
-                                    style="height:300px;"
-                                >
-                                    <li id="coffee1" class="col-lg-10">
-                                        <h2>咖啡起源</h2>
-                                        <p>
-                                            咖啡的來源已無從稽考，有諸多傳說。相傳，今天的奧羅莫人的祖先被認為是首個認識到咖啡樹令人振奮的效果，雖然沒有直接的證據指出非洲咖啡的增長或是本地人會用它作為興奮劑，甚至早於17世紀已經知道；另一傳說，據說是一千多年以前，在9世紀的衣索比亞西南部的高原地區，一位牧羊人發現他的羊吃了一種植物的種子(咖啡豆)後，變得非常興奮活潑，繼而發現咖啡，但此事截至1671年並沒有得到記載，有可能是杜撰的；也有說法是當地發生過一場野火，燒焦了一片咖啡林，經過燒烤咖啡的香味引起周圍居民注意，人們最初咀嚼這種植物果實來提神，後來烘烤磨碎摻入麵粉做成麵包，作為勇士的食物，提高作戰的勇氣。不過這些傳說故事都缺乏歷史文件佐證，只出現於後世的旅遊傳記中。據說，最初經栽培的咖啡是源自衣索比亞的哈勒爾。
-                                        </p>
-                                        <p>
-                                            直到11世紀左右，人們才開始用水煮咖啡做為飲料。13世紀時，衣索比亞軍隊入侵葉門，將咖啡帶到了阿拉伯世界。因為伊斯蘭教的清規禁止教徒飲酒，有的宗教界人士認為這種飲料刺激神經，違反教義，曾一度禁止並關閉咖啡店，但埃及蘇丹認為咖啡不違反教義，因而解禁，咖啡飲料迅速在阿拉伯地區流行開來。咖啡Coffee這個詞，就是來源於阿拉伯語Qahwa，意思是「植物飲料」，後來傳到土耳其，成為歐洲語言中這個詞的來源。咖啡種植，製作的方法也被阿拉伯人不斷地改進而逐漸完善。
-                                        </p>
-                                        <p>
-                                            但在西元15世紀以前，咖啡長期被阿拉伯世界所壟斷，僅在回教國家間流傳；當時主要被使用在醫學和宗教上，回教醫生和僧侶們承認咖啡具有提神、醒腦、健胃、強身、止血等功效；15世紀初開始有文獻記載咖啡的使用方式，並且在此時期融入宗教儀式中，同時也出現在民間做為日常飲品。因回教世界嚴禁飲酒，因此咖啡成為當時很重要的社交飲品。直到16、17世紀，透過威尼斯商人和海上霸權荷蘭人的買賣輾轉將咖啡傳入歐洲，很快地，這種充滿東方神秘色彩、口感馥郁香氣迷魅的黑色飲料受到貴族仕紳階級的爭相競逐，咖啡的身價也跟著水漲船高，甚至產生了「黑色金子」的稱號，當時的貴族流行在特殊日子互送咖啡豆以示盡情狂歡，或是給久未謀面的親友，有財入袋、祝賀順遂之意，同時也是身分地位象徵。而「黑色金子」在接下來風起雲湧的大航海時代，藉由海運的傳播，全世界都被納入了咖啡的生產和消費版圖中。
-                                        </p>
-                                    </li>
-                                    <li id="coffee2" class="col-lg-10">
-                                        <h2>咖啡好處</h2>
-                                        <p>
-                                            根據美國俄亥俄州立大學1994年的研究，咖啡因的確能提高清醒度， 能提高細胞內環磷腺?的含量，小劑量能興奮大腦皮層，
-                                            振奮精神，改善思維，消除疲勞，加快反應，提昇工作效率。 大劑量則可興奮延腦呼吸中樞和血管運動中樞， 增加呼吸頻率，造成過度刺激，
-                                            產生焦慮、興奮、頭痛、失眠、心神不寧。 一般而言，每天 喝100-300毫克 的咖啡因，就足以提神，且對身體無害。 又根據 [
-                                            美國國家糖尿病消化性腎臟研究院 ] 的研究指出， 咖啡因 與 降低罹患肝臟疾病的風險有相關， 也就是說一天喝1~2杯，肝臟保護功效。
-                                            咖啡因能促進胃酸的分泌，增進食欲， 加速食物的消化和吸收。咖啡還 刺激排便的作用。 咖啡因 的刺激會促進肌肉活動力，
-                                            但是刺激過多會導致抽筋、肌肉顫抖等。 咖啡因還可以抑制哮喘, 有支氣管藥物的功效， 常 喝咖啡者 較少氣喘。
-                                            咖啡含有與紅茶相似的氧化物chlorogenic acid（綠原酸）能很容易地被人體吸收， 具有保護腸道及預防直腸癌的作用。
-                                        </p>
-                                    </li>
-                                    <li id="coffee3" class="col-lg-10">
-                                        <h2>咖啡壞處</h2>
-                                        <p>
-                                            成長中的青少年 對咖啡因的興奮作用較敏感， 比較會有心悸..影響睡眠的情形。 咖啡因對有高血壓及心血管疾病的人有強心作用，
-                                            但同時也會使心跳加快，血壓增高， 亦容易引起心肌缺氧，對病情的控制不利。 懷孕的婦女過量的咖啡 會增加流產 及 胎兒發育遲緩的機會。 停經後的
-                                            婦女與老年人 過多的咖啡因會導致 鈣質的流失..骨質疏鬆症的機會。 咖啡因會刺激胃酸的分泌，胃潰瘍的患者可能惡化消化性潰瘍的病程。
-                                            空腹時不要喝咖啡，以免胃酸過多。 喝咖啡確實可能增加膽固醇，對心臟血管疾病的人非常不利。 咖啡中含有松烯（terpene芳香性碳水化合物）
-                                            這種油性的物質，對於心血管的影響因人而異， 但是通常它會造成血膽固醇上昇，不可不察。 這種物質的多寡 與 煮咖啡的方式有關：
-                                            如果是以高壓蒸氣 或 懸滴式咖啡機來煮時， 因為熱水與咖啡豆 接觸的時間短， 所以 terpene 被萃取出來的量少。
-                                            如果是以浸泡為主的煮法（如日本的塞風式咖啡機）， 熱水咖啡豆接觸時間長，則容易萃取出大量的 terpene。
-                                            因此，對於高膽固醇的人而言，建議少喝咖啡。 如要喝 要慎選煮法，並加上 濾紙 來過濾，對於 心血管比較健康。
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-block btn-coffee" data-dismiss="modal">關閉</button>
-                        </div>
-                    </div>
-                </div>
+      <!-- animate.css -->
+      <link rel="stylesheet" href="css/animate.css" />
+      <!-- My Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+
+   <body data-spy="scroll" data-target="#coffee-navbar">
+      <!-- loading -->
+      <!-- <div id="loading" class="position-relative">
+         <div id="loading-txt" class="h5 text-coffee position-absolute"></div>
+         <img src="images/loading.svg" alt="" width="150" height="150" />
+      </div> -->
+
+      <!-- content -->
+      <div id="content">
+         <!-- particles -->
+         <div id="particles-js" class="position-fixed h-100 w-100" style="z-index: 1; pointer-events: none;"></div>
+         <!-- 導覽列區 ------------------------------------------------------------------------------------------- -->
+         <header id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-1">
+            <a class="navbar-brand" href="#section01"><img src="images/logo.png" alt="泰山咖啡" width="50" /><span class="ml-2 align-middle">泰山咖啡莊園</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#coffee-navbar">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-lg-end" id="coffee-navbar">
+               <!-- .menu-left 連結底線滑動效果 -->
+               <ul class="navbar-nav menu-left">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#section02"><i class="fas fa-hamburger mr-1"></i>咖啡餐飲</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#section03"><i class="fas fa-bus mr-1"></i>周邊景點</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#section04"><i class="fas fa-map-marked-alt mr-1"></i>莊園位置</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#section05"><i class="fas fa-envelope mr-1"></i>聯絡我們</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#section06"><i class="fas fa-coffee mr-1"></i>咖啡故事</a>
+                  </li>
+               </ul>
+
+               <ul class="login navbar-nav menu-left ml-lg-4">
+                  <li class="nav-item">
+                     <a id="btn-login" class="nav-link" href="#login" data-toggle="modal"><i class="fas fa-user mr-1"></i>登入</a>
+                  </li>
+                  <span class="text-secondary px-1" style="line-height: 40px;">|</span>
+                  <li class="nav-item">
+                     <a id="btn-register" class="nav-link" href="#register" data-toggle="modal"><i class="fas fa-address-book mr-1gister"></i> 註冊</a>
+                  </li>
+               </ul>
             </div>
-            <!-- footer 頁尾 -------------------------------------------------------------------------------------------------------------- -->
-            <footer id="footer" class="bg-coffee1 text-white">
-                <div class="container-fluid">
-                    <div class="row flex-column flex-lg-row">
-                        <ul class="row flex-column flex-lg-row list-unstyled ml-3 mt-3 mr-auto">
-                            <li class="ml-lg-2"><i class="fas fa-map-marker-alt mr-2 align-middle"></i>新北市泰山區貴子里致遠新村55之1號</li>
-                            <li class="ml-lg-4"><i class="far fa-clock mr-2 align-middle"></i>營業時間：週一至週五 08:10~16:35，六、日 08:10~16:35</li>
-                            <li class="ml-lg-4"><i class="fas fa-phone mr-2 align-middle"></i>電話：（02）2901-8274</li>
-                        </ul>
-                        <ul class="row flex-column flex-lg-row list-unstyled ml-3 mr-3 mt-3">
-                            <li class="mr-2">
-                                <span id="year"></span>
-                                <span id="hour"></span>
-                                <span>:</span>
-                                <span id="min"></span>
-                                <span>:</span>
-                                <span id="sec"></span>
-                            </li>
-                            <li>
-                                &copy;Copyright - KaiFu Chang
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS （順序不能顛倒）-->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.js"></script>
+         </header>
 
-        <!-- scrollpage -->
-        <!-- 
-            網站：https://codepen.io/hollow3d/pen/ENgvvX
-            easing 速率可以參考 https://easings.net/
-            解壓縮後 dist 目錄裡面，script.js 為滑動主程式，將其改成 scrollpage.js 
-            另外，還需要 jquery-3.3.1.min.js、jquery.easing.min.js
-        -->
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/scrollpage.js"></script>
+         <!-- Modal 登入 -->
+         <form>
+            <div class="modal fade" id="login">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content p-3">
+                     <div class="modal-header">
+                        <h5 class="modal-title">會員登入</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                           <span>&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <div class="form-group">
+                           <label for="login_id">帳號：</label>
+                           <input type="text" class="form-control" id="login_id" />
+                        </div>
+                        <div class="form-group">
+                           <label for="login_pw">密碼：</label>
+                           <input type="password" class="form-control" id="login_pw" />
+                        </div>
+                     </div>
+                     <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-coffee" data-dismiss="modal">關閉</button>
+                        <button type="submit" class="btn btn-coffee">送出</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+         <!-- Modal 登入 end -->
 
-        <!-- magnific-popup -->
-        <!-- 
-            網站：https://dimsemenov.com/plugins/magnific-popup/
-            有兩支js，分為解壓縮後主要js 與 網站上需 download 個別的 js
-            
-            解壓縮後 dist 目錄裡面，jquery.magnific-popup.js、jquery.magnific-popup.min.js 選一個使用。
-            link magnific-popup.css
-            到網站，滑鼠移到各 example 標題上，會出現 view source 可以 download 個別需要的 js、css code
-         -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/magnific-popup-single.js"></script>
-        <script>
-            // loading-bar 效果
-            $('.container-fluid').css('display', 'none');
-            $(window).on('load', function() {
-                let loadingPerc = 0;
-                let loading = setInterval(() => {
-                    if (loadingPerc >= 100) {
-                        clearInterval(loading);
-                        $('.loading-bar').fadeOut(3000, function() {
-                            $(this).attr('class', 'loading-bar');
-                            setTimeout(() => {
-                                $('.container-fluid').fadeIn(1000);
-                            }, 2000);
-                        });
-                    } else {
-                        loadingPerc += 1;
-                        $('.progress-bar').css({
-                            width: loadingPerc + '%',
-                        });
-                        $('.progress-bar').addClass('animated rubberBand');
-                        $('.progress-bar').text(loadingPerc + '%');
-                    }
-                }, 50);
-            });
-            // 阻止 輪播圖 往上移動
-            $('.carousel-control-prev,.carousel-control-next').on('click', function(event) {
-                $('html,body').stop();
-            });
+         <!-- Modal 註冊 -->
+         <form>
+            <div class="modal fade" id="register">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content p-3">
+                     <div class="modal-header">
+                        <h5 class="modal-title">會員註冊</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                           <span>&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <div class="form-group">
+                           <label for="reg_id">帳號：</label>
+                           <input type="text" class="form-control" id="reg_id" />
+                        </div>
+                        <div class="form-group">
+                           <label for="reg_pw">密碼：</label>
+                           <input type="password" class="form-control" id="reg_pw" />
+                        </div>
+                        <div class="form-group">
+                           <label for="reg_pw2">確認密碼：</label>
+                           <input type="password" class="form-control" id="reg_pw2" />
+                        </div>
+                     </div>
+                     <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-coffee" data-dismiss="modal">關閉</button>
+                        <button type="submit" class="btn btn-coffee">送出</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+         <!-- Modal 註冊 end -->
 
-            // 加入 active
-            $('#navbarSupportedContent .nav-link').on('click', function() {
-                // 記錄第幾個 nav-link 的 index
-                let index = $('#navbarSupportedContent .nav-link').index(this);
-                if ($('#navbarSupportedContent .nav-link').hasClass('active')) {
-                    $('#navbarSupportedContent .nav-link').removeClass('active');
-                    $('#navbarSupportedContent .nav-link')
-                        .eq(index)
-                        .addClass('active');
-                } else {
-                    $('#navbarSupportedContent .nav-link')
-                        .eq(index)
-                        .addClass('active');
-                }
-            });
+         <!-- 輪播圖 section01 --------------------------------------------------------------------------------- -->
+         <!-- section id 區、carsousel id 區、圖片區 三個都要設成 h-100，scrollpage 才會滑動到正常位置-->
+         <section id="section01">
+            <div id="coffee-carousel" class="carousel slide carousel-fade h-100" data-ride="carousel" data-interval="8000">
+               <!-- 指示器 -->
+               <ol class="carousel-indicators">
+                  <li data-target="#coffee-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#coffee-carousel" data-slide-to="1"></li>
+                  <li data-target="#coffee-carousel" data-slide-to="2"></li>
+                  <li data-target="#coffee-carousel" data-slide-to="3"></li>
+                  <li data-target="#coffee-carousel" data-slide-to="4"></li>
+               </ol>
+               <!-- 圖片 -->
+               <div class="carousel-inner h-100">
+                  <div class="carousel-item active">
+                     <img src="images/carousel_01.jpg" class="img-scale d-block w-100" alt="輪播圖01" />
+                  </div>
+                  <div class="carousel-item">
+                     <img src="images/carousel_02.jpg" class="img-scale d-block w-100" alt="輪播圖02" />
+                  </div>
+                  <div class="carousel-item">
+                     <img src="images/carousel_03.jpg" class="img-scale d-block w-100" alt="輪播圖03" />
+                  </div>
+                  <div class="carousel-item">
+                     <img src="images/carousel_04.jpg" class="img-scale d-block w-100" alt="輪播圖04" />
+                  </div>
+                  <div class="carousel-item">
+                     <img src="images/carousel_05.jpg" class="img-scale d-block w-100" alt="輪播圖05" />
+                  </div>
+               </div>
+               <!-- 左左右右 -->
+               <a class="carousel-control-prev" href="#coffee-carousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#coffee-carousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </section>
 
-            // data- 啟動 tooltip
-            $('[data-toggle="tooltip"]').tooltip();
+         <!-- 各式餐飲 section02 --------------------------------------------------------------------------------- -->
+         <section id="section02" class="d-flex justify-content-center align-items-center" data-parallax="scroll" data-bleed="50" data-image-src="./images/parallax_01.jpg" data-natural-width="1800" data-natural-height="900">
+            <div class="container">
+               <!-- row -->
+               <div class="row">
+                  <div class="col-12 col-lg-2">
+                     <ul class="list-group list-group-flush flex-row flex-lg-column">
+                        <li class="list-group-item p-0"><a class="nav-item nav-link active" data-toggle="pill" href="#eat-01">咖啡飲品</a></li>
+                        <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-02">特調飲品</a></li>
+                        <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-03">手作蛋糕</a></li>
+                        <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-04">輕食料理</a></li>
+                        <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-05">燉飯/義大利麵</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-12 col-lg-10">
+                     <div class="tab-content">
+                        <!-- 咖啡飲品 -->
+                        <div class="tab-pane fade show active" id="eat-01">
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=1" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">義式濃縮卡啡</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card h-100">
+                                    <img src="https://picsum.photos/300/200/?random=2" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">美式冰咖啡</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=3" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">拿鐵咖啡</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=4" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">卡布奇諾</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=5" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">焦糖瑪奇朵</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=6" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">摩卡咖啡</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=7" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">泰山特調卡啡</h5>
+                                       <p class="card-text">香醇綿密口味的咖啡</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- 特調飲品 -->
+                        <div class="tab-pane fade" id="eat-02">
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=8" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">冰牛奶</h5>
+                                       <p class="card-text">原味/草莓/香草</p>
+                                       <p class="card-text">各式風味獨特經典飲品</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=9" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">風味鮮奶茶</h5>
+                                       <p class="card-text">原味/榛果/黑糖</p>
+                                       <p class="card-text">各式味獨特經典飲品</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=10" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">日式抹茶歐蕾</h5>
+                                       <p class="card-text">各式風味獨特經典飲品</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=11" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">蜂蜜香柚茶</h5>
+                                       <p class="card-text">各式風味獨特經典飲品</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=12" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">百香鮮果茶</h5>
+                                       <p class="card-text">各式風味獨特經典飲品</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=13" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">泰山特調冰茶</h5>
+                                       <p class="card-text">各式風味獨特經典飲品</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- 手作蛋糕 -->
+                        <div class="tab-pane fade" id="eat-03">
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=14" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">黑糖波士頓</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=15" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">提拉米蘇</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=16" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">檸檬起士塔</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=17" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">蒙布朗</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=18" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">櫻桃起司</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=19" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">頂級瑞士巧克力</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=20" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">德式布丁</h5>
+                                       <p class="card-text">口感層次豐富，入口甜在心</p>
+                                       <span>NT.100</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- 輕食料理 -->
+                        <div class="tab-pane fade" id="eat-04">
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=21" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">帕瑪火腿起司佛卡夏</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=22" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">炙燒牛肉起司佛卡夏</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
 
-            // js 啟動 popover
-            $('#name').popover({
-                title: '請輸入姓名',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, repellat!',
-                placement: 'left',
-            });
-            $('#tel').popover({
-                title: '請輸入電話',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, repellat!',
-                placement: 'left',
-            });
-            $('#email').popover({
-                title: '請輸入電子郵件',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, repellat!名',
-                placement: 'left',
-            });
-            $('#message').popover({
-                title: '請輸入留言訊息',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, repellat!',
-                placement: 'left',
-            });
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=23" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">塔塔舒肥雞胸佛卡夏</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
 
-            // Bootstrap 的表單驗證
-            (function() {
-                'use strict';
-                window.addEventListener(
-                    'load',
-                    function() {
-                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                        var forms = document.getElementsByClassName('needs-validation');
-                        // Loop over them and prevent submission
-                        var validation = Array.prototype.filter.call(forms, function(form) {
-                            form.addEventListener(
-                                'submit',
-                                function(event) {
-                                    if (form.checkValidity() === false) {
-                                        event.preventDefault();
-                                        event.stopPropagation();
-                                    }
-                                    form.classList.add('was-validated');
-                                },
-                                false
-                            );
-                        });
-                    },
-                    false
-                );
-            })();
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=24" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">洋芋起司三重奏熱壓丹麥</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
 
-            // 小時鐘
-            // jQuery 寫法 ----------------------------------------------------------------->
-            setInterval(() => {
-                let myTime = new Date();
-                let year = myTime.getFullYear();
-                let hour = myTime.getHours();
-                let min = myTime.getMinutes();
-                let sec = myTime.getSeconds();
-                $('#year').text(year + ' 年');
-                $('#hour').text(hour + ' 時');
-                $('#min').text(min + ' 分');
-                $('#sec').text(sec + ' 秒');
-                if (hour <= 9) {
-                    $('#hour').text('0' + hour + ' 時');
-                }
-                if (min <= 9) {
-                    $('#min').text('0' + min + ' 分');
-                }
-                if (sec <= 9) {
-                    $('#sec').text('0' + sec + ' 秒');
-                }
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=25" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">青醬起司雞肉熱壓丹麥</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
+
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=26" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">墨西哥辣味起司熱壓丹麥</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
+
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=27" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">冰釀冰滴卡啡</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
+
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=28" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">韓式泡菜起司雞肉</h5>
+                                       <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
+
+                                       <span>NT.300</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- 燉飯/義大利麵 -->
+                        <div class="tab-pane fade" id="eat-05">
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=29" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">綜合時蔬麻花麵</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=30" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">羅勒青醬烤腿義大利麵</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=31" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">海膽魚卵鮮蝦義大利麵</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=32" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">蒜片辣椒牛排義大利麵</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=33" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">龍蝦海鮮手工義大利麵</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=34" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">野菇奶油松露燉飯</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=35" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">家鄉鹹粥海鮮燉飯</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-6 col-lg-3">
+                                 <div class="card">
+                                    <img src="https://picsum.photos/300/200/?random=36" class="card-img-top" />
+                                    <div class="card-body">
+                                       <h5 class="card-title">松阪豬麻油燉飯</h5>
+                                       <p class="card-text">義式香氣撲鼻人人愛</p>
+                                       <span>NT.380</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- row end -->
+            </div>
+         </section>
+
+         <!-- 視差 -->
+         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=2"></div> -->
+
+         <!-- 周邊景點 section03 --------------------------------------------------------------------------------- -->
+         <section id="section03" class="pb-5 pb-lg-0">
+            <div class="container h-100 d-lg-flex flex-lg-column justify-content-lg-center pt-5">
+               <h3>周邊景點</h3>
+               <div class="row justify-content-lg-center">
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=1" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=1" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">101大樓</h4>
+                              <p>淡淡都能運行嚴重問道未知壓縮過了最低素。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=2" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=2" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">國父紀念館</h4>
+                              <p>指標一聲無奈，電影歡迎，有限有。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=3" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=3" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">中正紀念堂</h4>
+                              <p>交通一聲代理期待消除對比，尤其到底之類，先進用途。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=4" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=4" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">西門町</h4>
+                              <p>明天價值感謝他人這種焦點體制刪除活動女生失。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=5" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=5" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">台北東區</h4>
+                              <p>平均一場基礎上聯合，一道是個，吃。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=6" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=6" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">士林夜市</h4>
+                              <p>病人狀態有時候，海外幾年回頭沒事十。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=7" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=7" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">陽明山國家公園</h4>
+                              <p>不是很，看過更為是指那麼，放在影視沒想到，設為明顯，股。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=8" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=8" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">台北市立動物園</h4>
+                              <p>很大外掛升級，本網個人故障，上。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=9" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=9" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">淡水老街</h4>
+                              <p>填寫就在德國一座其中合作留學故意成本人家麻煩多多小時市委利。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-lg-3">
+                     <a href="https://picsum.photos/1920/1280/?random=10" class="image-popup-no-margins">
+                        <div class="view">
+                           <img src="https://picsum.photos/1920/1280/?random=10" class="img-fluid" />
+
+                           <div class="text">
+                              <h4 class="text-center">萬華龍山寺</h4>
+                              <p>頓時接口歌曲針對感染實施同事，被人包含。</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- 視差 -->
+         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=3"></div> -->
+
+         <!-- 莊園位置 section04 --------------------------------------------------------------------------------- -->
+         <section id="section04">
+            <div class="embed-responsive embed-responsive-21by9 h-100">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7082070567467!2d121.41715191500651!3d25.043974683967754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1563795604172!5m2!1szh-TW!2stw"
+                  width="600"
+                  height="450"
+                  frameborder="0"
+                  allowfullscreen
+               ></iframe>
+            </div>
+            <div class="infomation">
+               <input id="accordion" type="checkbox" />
+               <div class="accordion" id="kaifu_accordion">
+                  <div class="infomation_switch">
+                     <label for="accordion">
+                        <i class="close fas fa-angle-double-right"></i>
+                        <i class="close fas fa-angle-double-left"></i>
+                     </label>
+                  </div>
+                  <h3>交通資訊</h3>
+                  <div class="card">
+                     <div class="card-header" id="heading1">
+                        <h2 class="mb-0">
+                           <button class="btn btn-block btn-link" type="button" data-toggle="collapse" data-target="#collapse1">搭捷運</button>
+                        </h2>
+                     </div>
+
+                     <div id="collapse1" class="collapse show" data-parent="#kaifu_accordion">
+                        <div class="card-body">
+                           <ul>
+                              <li>臺北捷運中和新蘆線至丹鳳站1號出口或桃園捷運機場線至泰山貴和站（明志科大）1號出口，再轉乘公車或騎乘YouBike微笑單車（約10~15分鐘）至明志科技大學。</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="heading2">
+                        <h2 class="mb-0">
+                           <button class="btn btn-block btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2">搭公車</button>
+                        </h2>
+                     </div>
+                     <div id="collapse2" class="collapse" data-parent="#kaifu_accordion">
+                        <div class="card-body">
+                           <ul>
+                              <li>三重客運(637、638)、指南客運(797、798、801、858、880、883、1501、1503)，至明志科技大學站下車。</li>
+                              <li>新北市泰山區免費公車(泰山區F216明志國小-台北車站(北三門搭車))：至貴子路下車後，步行至貴子路口左轉明志路3段，明志路直行約100公尺至工專路右轉，再直行即可至明志科技大學。</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="heading3">
+                        <h2 class="mb-0">
+                           <button class="btn btn-block btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3">
+                              騎乘YouBike公共自行車
+                           </button>
+                        </h2>
+                     </div>
+                     <div id="collapse3" class="collapse" data-parent="#kaifu_accordion">
+                        <div class="card-body">
+                           <ul>
+                              <li>可停放於明志科技大學校門口公車站旁的租賃區。</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="heading4">
+                        <h2 class="mb-0">
+                           <button class="btn btn-block btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4">自行開車</button>
+                        </h2>
+                     </div>
+                     <div id="collapse4" class="collapse" data-parent="#kaifu_accordion">
+                        <div class="card-body">
+                           <ul>
+                              <li>高速公路五股交流道下(往新莊、泰山)，經新五路至新北大道右轉，直行至貴子路口右轉，貴子路直行至明志路左轉。於明志路繼續前行約100公尺右轉工專路，即可抵達明科技大學。</li>
+                              <li>由台北車站走忠孝橋，直行高架道路，下到平面道路之後直行至貴子路口右轉，貴子路直行至明志路左轉，於明志路繼續前行約100公尺右轉工專路，即可抵達明科技大學。</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="heading5">
+                        <h2 class="mb-0">
+                           <button class="btn btn-block btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5">停車資訊</button>
+                        </h2>
+                     </div>
+                     <div id="collapse5" class="collapse" data-parent="#kaifu_accordion">
+                        <div class="card-body">
+                           <ul>
+                              <li>明志科大「汽車」停車費30元/小時，請儘量搭乘大眾交通工具或機車（免停車費）。</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- 視差 -->
+         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=4"></div> -->
+
+         <!-- 聯絡我們 section05 --------------------------------------------------------------------------------- -->
+         <section id="section05">
+            <div class="container h-100">
+               <form class="d-flex align-items-center h-100" novalidate>
+                  <div class="row">
+                     <div class="col-12 mb-2">
+                        <h5 class="m-0">泰山咖啡莊園，傳承熱情coding精神</h5>
+                        <small>任何服務問題或建議，歡迎您透過客服表單告知我們，謝謝!</small>
+                     </div>
+                     <div class="col-lg-6">
+                        <label for="q_name"><h6 class="m-0">姓名</h6></label>
+                        <div class="input-group mb-3">
+                           <input id="q_name" type="text" class="form-control" />
+                           <div class="input-group-append">
+                              <div class="input-group-text">
+                                 <label for="q_male" class="m-0 mr-1">先生</label>
+                                 <input id="q_male" class="mr-3" type="radio" name="gender" />
+                                 <label for="q_female" class="m-0 mr-1">女士</label>
+                                 <input id="q_female" type="radio" name="gender" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <label for="q_tel"><h6 class="m-0">電話</h6></label>
+                        <div class="input-group mb-3">
+                           <input id="q_tel" type="tel" class="form-control" />
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <label for="q_email"><h6 class="m-0">電子信箱</h6></label>
+                        <div class="input-group mb-3">
+                           <input id="q_email" type="email" class="form-control" />
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <label for="q_type"><h6 class="m-0">問題類型</h6></label>
+                        <div class="input-group mb-3">
+                           <select id="q_type" class="custom-select">
+                              <option value="餐飲建議" selected>餐飲建議</option>
+                              <option value="服務品質">服務品質</option>
+                              <option value="其他">其他</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <label for="q_comment"><h6 class="m-0">意見需求</h6></label>
+                        <div class="input-group mb-3">
+                           <textarea id="q_comment" class="form-control" rows="5" name="q_comment"></textarea>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <div class="input-group">
+                           <div class="custom-control custom-checkbox">
+                              <input id="q_order" type="checkbox" class="custom-control-input" />
+                              <label for="q_order" class="custom-control-label">訂閱泰山莊園最新資訊</label>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-12">
+                        <div class="input-group justify-content-center">
+                           <button class="btn btn-coffee" type="submit">送出</button>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </section>
+
+         <!-- 視差 -->
+         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=1"></div> -->
+         <!-- 咖啡故事 section06 --------------------------------------------------------------------------------- -->
+         <section id="section06" data-parallax="scroll" data-bleed="50" data-image-src="./images/parallax_01.jpg" data-natural-width="1800" data-natural-height="900">
+            <div class="container">
+               <h1 class="text-center text-white py-4">咖啡故事</h1>
+               <div class="row">
+                  <div class="col-12 col-lg-6">
+                     <img id="nav-img" class="h-100 w-100" src="images/section02_01.jpg" style="object-fit: cover; border: 6px solid #fff;" />
+                  </div>
+                  <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                     <!-- nav-tab -->
+                     <nav>
+                        <div class="nav nav-tabs" id="nav-tab">
+                           <a id="coffee1" class="nav-item nav-link active" data-toggle="tab" href="#coffee-01">咖啡起源</a>
+                           <a id="coffee2" class="nav-item nav-link" data-toggle="tab" href="#coffee-02">咖啡好處</a>
+                           <a id="coffee3" class="nav-item nav-link" data-toggle="tab" href="#coffee-03">咖啡壞處</a>
+                        </div>
+                     </nav>
+                     <div class="tab-content bg-white p-3 overflow-auto" data-spy="scroll" data-target="#nav-tabs" style="height: 500px;">
+                        <div class="tab-pane fade show active" id="coffee-01">
+                           <h2>咖啡起源</h2>
+                           <p>
+                              咖啡的來源已無從稽考，有諸多傳說。相傳，今天的奧羅莫人的祖先被認為是首個認識到咖啡樹令人振奮的效果，雖然沒有直接的證據指出非洲咖啡的增長或是本地人會用它作為興奮劑，甚至早於17世紀已經知道；另一傳說，據說是一千多年以前，在9世紀的衣索比亞西南部的高原地區，一位牧羊人發現他的羊吃了一種植物的種子(咖啡豆)後，變得非常興奮活潑，繼而發現咖啡，但此事截至1671年並沒有得到記載，有可能是杜撰的；也有說法是當地發生過一場野火，燒焦了一片咖啡林，經過燒烤咖啡的香味引起周圍居民注意，人們最初咀嚼這種植物果實來提神，後來烘烤磨碎摻入麵粉做成麵包，作為勇士的食物，提高作戰的勇氣。不過這些傳說故事都缺乏歷史文件佐證，只出現於後世的旅遊傳記中。據說，最初經栽培的咖啡是源自衣索比亞的哈勒爾。
+                           </p>
+                           <p>
+                              直到11世紀左右，人們才開始用水煮咖啡做為飲料。13世紀時，衣索比亞軍隊入侵葉門，將咖啡帶到了阿拉伯世界。因為伊斯蘭教的清規禁止教徒飲酒，有的宗教界人士認為這種飲料刺激神經，違反教義，曾一度禁止並關閉咖啡店，但埃及蘇丹認為咖啡不違反教義，因而解禁，咖啡飲料迅速在阿拉伯地區流行開來。咖啡Coffee這個詞，就是來源於阿拉伯語Qahwa，意思是「植物飲料」，後來傳到土耳其，成為歐洲語言中這個詞的來源。咖啡種植，製作的方法也被阿拉伯人不斷地改進而逐漸完善。
+                           </p>
+                           <p>
+                              但在西元15世紀以前，咖啡長期被阿拉伯世界所壟斷，僅在回教國家間流傳；當時主要被使用在醫學和宗教上，回教醫生和僧侶們承認咖啡具有提神、醒腦、健胃、強身、止血等功效；15世紀初開始有文獻記載咖啡的使用方式，並且在此時期融入宗教儀式中，同時也出現在民間做為日常飲品。因回教世界嚴禁飲酒，因此咖啡成為當時很重要的社交飲品。直到16、17世紀，透過威尼斯商人和海上霸權荷蘭人的買賣輾轉將咖啡傳入歐洲，很快地，這種充滿東方神秘色彩、口感馥郁香氣迷魅的黑色飲料受到貴族仕紳階級的爭相競逐，咖啡的身價也跟著水漲船高，甚至產生了「黑色金子」的稱號，當時的貴族流行在特殊日子互送咖啡豆以示盡情狂歡，或是給久未謀面的親友，有財入袋、祝賀順遂之意，同時也是身分地位象徵。而「黑色金子」在接下來風起雲湧的大航海時代，藉由海運的傳播，全世界都被納入了咖啡的生產和消費版圖中。
+                           </p>
+                        </div>
+                        <div class="tab-pane fade" id="coffee-02">
+                           <h2>咖啡好處</h2>
+                           <p>
+                              根據美國俄亥俄州立大學1994年的研究，咖啡因的確能提高清醒度， 能提高細胞內環磷腺?的含量，小劑量能興奮大腦皮層， 振奮精神，改善思維，消除疲勞，加快反應，提昇工作效率。 大劑量則可興奮延腦呼吸中樞和血管運動中樞， 增加呼吸頻率，造成過度刺激，
+                              產生焦慮、興奮、頭痛、失眠、心神不寧。 一般而言，每天 喝100-300毫克 的咖啡因，就足以提神，且對身體無害。 又根據 [ 美國國家糖尿病消化性腎臟研究院 ] 的研究指出， 咖啡因 與 降低罹患肝臟疾病的風險有相關， 也就是說一天喝1~2杯，肝臟保護功效。
+                              咖啡因能促進胃酸的分泌，增進食欲， 加速食物的消化和吸收。咖啡還 刺激排便的作用。 咖啡因 的刺激會促進肌肉活動力， 但是刺激過多會導致抽筋、肌肉顫抖等。 咖啡因還可以抑制哮喘, 有支氣管藥物的功效， 常 喝咖啡者 較少氣喘。 咖啡含有與紅茶相似的氧化物chlorogenic
+                              acid（綠原酸）能很容易地被人體吸收， 具有保護腸道及預防直腸癌的作用。
+                           </p>
+                        </div>
+                        <div class="tab-pane fade" id="coffee-03">
+                           <h2>咖啡壞處</h2>
+                           <p>
+                              成長中的青少年 對咖啡因的興奮作用較敏感， 比較會有心悸..影響睡眠的情形。 咖啡因對有高血壓及心血管疾病的人有強心作用， 但同時也會使心跳加快，血壓增高， 亦容易引起心肌缺氧，對病情的控制不利。 懷孕的婦女過量的咖啡 會增加流產 及 胎兒發育遲緩的機會。 停經後的 婦女與老年人
+                              過多的咖啡因會導致 鈣質的流失..骨質疏鬆症的機會。 咖啡因會刺激胃酸的分泌，胃潰瘍的患者可能惡化消化性潰瘍的病程。 空腹時不要喝咖啡，以免胃酸過多。 喝咖啡確實可能增加膽固醇，對心臟血管疾病的人非常不利。 咖啡中含有松烯（terpene芳香性碳水化合物）
+                              這種油性的物質，對於心血管的影響因人而異， 但是通常它會造成血膽固醇上昇，不可不察。 這種物質的多寡 與 煮咖啡的方式有關： 如果是以高壓蒸氣 或 懸滴式咖啡機來煮時， 因為熱水與咖啡豆 接觸的時間短， 所以 terpene 被萃取出來的量少。
+                              如果是以浸泡為主的煮法（如日本的塞風式咖啡機）， 熱水咖啡豆接觸時間長，則容易萃取出大量的 terpene。 因此，對於高膽固醇的人而言，建議少喝咖啡。 如要喝 要慎選煮法，並加上 濾紙 來過濾，對於 心血管比較健康。
+                           </p>
+                        </div>
+                     </div>
+                     <!--  nav-tab end -->
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- footer 頁尾 ---------------------------------------------------------------------------------------- -->
+         <footer id="footer">
+            <div class="container-fluid">
+               <div class="row justify-content-lg-center align-items-lg-center text-white">
+                  <div class="col-auto"><i class="fas fa-map-marker-alt mr-2"></i><span class="align-middle">新北市泰山區貴子里致遠新村55之1號</span></div>
+                  <div class="col-auto mt-1"><i class="far fa-clock mr-2"></i><span class="align-middle">營業時間：週一至週五 08:10~16:35，六、日 08:10~16:35</span></div>
+                  <div class="col-auto mt-1"><i class="fas fa-phone mr-2 align-middle"></i><span class="align-middle">電話：（02）2901-8274</span></div>
+                  <div class="col-auto mt-1">
+                     <ul class="list-unstyled d-flex flex-lg-row mb-0">
+                        <li class="mr-1">
+                           <a href="https://www.facebook.com/tsvts/" target="_blank" data-toggle="tooltip" data-placement="top" data-container="#footer" data-offset="0,10" title="泰山職訓局粉絲團"><i class="fab fa-facebook" style="font-size: 30px; color: white;"></i></a>
+                        </li>
+                        <li class="mr-1">
+                           <a href="https://wdaweb.github.io/" target="_blank" data-toggle="tooltip" data-placement="top" data-container="#footer" data-offset="0,10" title="網頁設計課程介紹"><img src="images/wda.png" width="30" alt="" /></a>
+                        </li>
+                        <li>
+                           <a href="https://www.taiwanjobs.gov.tw/home/new_index.aspx" target="_blank" data-toggle="tooltip" data-placement="top" data-container="#footer" data-offset="0,10" title="台灣就業通"><img src="images/twjb.png" width="30" alt="" /></a>
+                        </li>
+                        <li></li>
+                        <li></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </footer>
+
+         <!-- 回到頂端 -->
+         <div id="go_top_page" class="animate__animated animate__bounce animate__slower" style="animation-iteration-count: infinite;">
+            <a href="#section01">TOP</a>
+         </div>
+      </div>
+      <!-- content end -->
+
+      <!-- jQuery first, then Popper.js, then Bootstrap JS （順序不能顛倒）-->
+      <script src="js/jquery-3.5.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+
+      <!--
+        scrollpage
+        網站：https://codepen.io/hollow3d/pen/ENgvvX
+        easing 速率可以參考 https://easings.net/
+        解壓縮後 dist 目錄裡面，script.js 為滑動主程式，將其改成 scrollpage.js 
+        另外，還需要 jquery-3.4.1.min.js、jquery.easing.min.js
+      -->
+      <script src="js/jquery.easing.min.js"></script>
+      <script src="js/scrollpage.js"></script>
+
+      <!-- 捲動 smooth 效果 -->
+      <script src="js/jquery.easeScroll.js"></script>
+
+      <!-- 視差1 http://pixelcog.github.io/parallax.js/ -->
+      <script src="js/parallax.min.js"></script>
+
+      <!-- 視差2 -->
+      <!--
+         magnific-popup 
+        網站：https://dimsemenov.com/plugins/magnific-popup/
+        有兩支js，分為解壓縮後主要js 與 網站上需 download 個別的 js
+        
+        解壓縮後 dist 目錄裡面，jquery.magnific-popup.js、jquery.magnific-popup.min.js 選一個使用。
+        別忘了 link => magnific-popup.css
+        到網站，滑鼠移到各 example 細項的標題上，會出現 view source 可以 download 個別需要的 js、css code
+      -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/magnific-popup-single.js"></script>
+
+      <!-- wow.js -->
+      <script src="js/wow.min.js"></script>
+
+      <!-- particle.js -->
+      <script src="js/particles.min.js"></script>
+      <script src="js/particles_app.js"></script>
+
+      <script>
+         // 阻止最小尺寸時點選輪播圖左、右按鈕，往上移動
+         // 阻止 咖啡故事按下 tab 按鈕，跳回頂部
+         $('.carousel-control-prev,.carousel-control-next,#btn-login,#btn-register,[data-toggle="pill"],[data-toggle="tab"]').on('click', function (event) {
+            // preventDefault() 方法阻止元素發生默認的行為（例如，當點擊提交按鈕時阻止對錶單的提交）。
+            event.preventDefault();
+            $('html, body').stop();
+         });
+
+         //  easeScroll jQuery插件使鼠標滾輪平滑滾動
+         $('html').easeScroll({
+            animationTime: 2000
+         });
+
+         // addClass
+         $('#addClass').on('click', function () {
+            $('.navbar-brand').addClass('animated bounce');
+            setTimeout(() => {
+               $('.navbar-brand').removeClass('animated bounce');
             }, 1000);
-        </script>
-    </body>
+         });
+
+         // 咖啡故事 section06 換圖
+         $('#coffee1').on('click', function () {
+            $('#nav-img').attr('src', 'images/section02_01.jpg');
+         });
+         $('#coffee2').on('click', function () {
+            $('#nav-img').attr('src', 'images/section02_02.jpg');
+         });
+         $('#coffee3').on('click', function () {
+            $('#nav-img').attr('src', 'images/section02_03.jpg');
+         });
+
+         // loading 01
+         // $('#content').css('display', 'none');
+         // $(window).on('load', function () {
+         //     $('#loading').fadeOut(1000, function () {
+         //         $('#content').fadeIn(1000);
+         //     });
+         // });
+
+         // loading 02
+         // $('#content').hide();
+         // $(window).on('load', function () {
+         //     let loadingPerc = 0;
+         //     let loading = setInterval(() => {
+         //         if (loadingPerc >= 100) {
+         //             $('#loading').fadeOut();
+         //             $('#content').fadeIn();
+         //             new WOW().init();
+         //             clearInterval(loading);
+         //         } else {
+         //             loadingPerc += 4;
+         //             $('#loading-txt').css({
+         //                 // width: loadingPerc + '%',
+         //             });
+         //             $('#loading-txt').text(loadingPerc + '%');
+         //         }
+         //     }, 50);
+         // });
+
+         // 啟動彈出訊息框
+         $('[data-toggle="tooltip"]').tooltip();
+
+         // Bootstrap 表單驗證
+         (function () {
+            'use strict';
+            window.addEventListener(
+               'load',
+               function () {
+                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  var forms = document.getElementsByClassName('needs-validation');
+                  // Loop over them and prevent submission
+                  var validation = Array.prototype.filter.call(forms, function (form) {
+                     form.addEventListener(
+                        'submit',
+                        function (event) {
+                           if (form.checkValidity() === false) {
+                              event.preventDefault();
+                              event.stopPropagation();
+                           }
+                           form.classList.add('was-validated');
+                        },
+                        false
+                     );
+                  });
+               },
+               false
+            );
+         })();
+      </script>
+   </body>
 </html>
 
-<script>
-    // javascript 寫法 ----------------------------------------------------------------->
-    // setInterval(() => {
-    //     var myTime = new Date();
-    //     var year = myTime.getFullYear();
-    //     var hour = myTime.getHours();
-    //     var min = myTime.getMinutes();
-    //     var sec = myTime.getSeconds();
-    //     document.getElementById('year').innerText = year + ' 年';
-    //     document.getElementById('hour').innerText = hour + ' 時';
-    //     document.getElementById('min').innerText = min + ' 分';
-    //     document.getElementById('sec').innerText = sec + ' 秒';
-    //     if (hour <= 9) {
-    //         document.getElementById('hour').innerText = '0' + hour + ' 時';
-    //     }
-    //     if (min <= 9) {
-    //         document.getElementById('min').innerText = '0' + min + ' 分';
-    //     }
-    //     if (sec <= 9) {
-    //         document.getElementById('sec').innerText = '0' + sec + ' 秒';
-    //     }
-    // }, 1000);
-</script>
+<!--
+【LOGO】
+https://www.freepik.com/
+
+【image】
+https://pixabay.com/  
+https://unsplash.com/
+-->
