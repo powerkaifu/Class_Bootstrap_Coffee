@@ -54,12 +54,13 @@
 
 /* body  --------------------------------------------------------------------------------------------------------*/
 body {
-   font-family: "微軟正黑體", sans-serif;
+   font-family: '微軟正黑體', sans-serif;
+   background-color: var(--coffee1);
 }
 
 /* 導覽列 -------------------------------------------------------------------------------------------------------*/
 #navbar {
-   background: linear-gradient(270deg, var(--coffee1) 0%, transparent 90%);
+   background: linear-gradient(180deg, black 20%, transparent);
 }
 /* section01 輪播圖 ---------------------------------------------------------------------------------------------*/
 .carousel-control-prev,
@@ -378,9 +379,10 @@ option:checked {
 
 /* #footer ------------------------------------------------------------------------------------------------------*/
 #footer {
-   background-color: var(--black50);
+   color: var(--coffee5);
+   /* background: var(--coffee1); */
+   background: linear-gradient(0deg, var(--coffee1) 40%, transparent);
    padding: 1rem 0;
-   background: linear-gradient(90deg, var(--coffee1) 0%, transparent 90%);
 }
 
 /* 裝置斷點控制區 -------------------------------------------------------------------------------------------------*/
@@ -453,7 +455,6 @@ option:checked {
    #section05,
    #section06 {
       height: 100vh;
-      position: relative;
    }
 
    /* section02 */
@@ -498,8 +499,7 @@ header {
    will-change: transform;
    transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
    transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
-   transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s,
-      -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+   transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
    transform: translateY(0);
    -webkit-transform: translateY(0);
 }
@@ -542,7 +542,7 @@ ul.menu-left {
    padding-bottom: 0.5rem;
 }
 .menu-left a:before {
-   content: "";
+   content: '';
    display: block;
    position: absolute;
    left: 0;
@@ -552,7 +552,7 @@ ul.menu-left {
    transition: width 0s ease, background 0.35s ease;
 }
 .menu-left a:after {
-   content: "";
+   content: '';
    display: block;
    position: absolute;
    right: 0;
@@ -610,7 +610,7 @@ ul.menu-left {
    position: fixed;
    right: 60px;
    bottom: 0;
-   z-index: 3000;
+   z-index: 9999;
 }
 
 #go_top_page a {
@@ -623,22 +623,22 @@ ul.menu-left {
 
 /* 彈出訊息框背景顏色 */
 .bs-tooltip-top .arrow::before,
-.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+.bs-tooltip-auto[x-placement^='top'] .arrow::before {
    border-top-color: #fff;
 }
 
 .bs-tooltip-right .arrow::before,
-.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+.bs-tooltip-auto[x-placement^='right'] .arrow::before {
    border-right-color: #fff;
 }
 
 .bs-tooltip-bottom .arrow::before,
-.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+.bs-tooltip-auto[x-placement^='bottom'] .arrow::before {
    border-bottom-color: #fff;
 }
 
 .bs-tooltip-left .arrow::before,
-.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+.bs-tooltip-auto[x-placement^='left'] .arrow::before {
    border-left-color: #fff;
 }
 
