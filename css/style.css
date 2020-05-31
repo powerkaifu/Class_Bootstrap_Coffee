@@ -92,6 +92,11 @@ body {
    }
 }
 
+/* lg 已經 height 100%，.carousel-item 沒有 height:100% 圖片會無法填滿  */
+.carousel-item {
+   height: 100%;
+}
+
 /* 圖片 object-fit */
 .carousel-inner img {
    width: 100%;
@@ -99,18 +104,44 @@ body {
    object-fit: cover;
 }
 
-/* lg 已經 height 100%，.carousel-item 沒有 height:100% 圖片會無法填滿  */
-.carousel-item {
-   height: 100%;
+#section01,
+#section02,
+#section03,
+#section04,
+#section05,
+#section06 {
+   position: relative;
+   overflow: hidden;
 }
 
 /* section02 咖啡餐飲 --------------------------------------------------------------------------------------------*/
+#section02 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--coffee4);
+}
+
 #section02 .container {
+   padding: 1rem;
    background: var(--white50);
+}
+
+#section02 > .container > .row {
+   box-shadow: var(--shadow2);
+}
+
+#section02 .container h1 {
+   text-align: center;
+   color: var(--coffee1);
 }
 
 #section02 .list-group {
    font-size: 1.2rem;
+}
+
+#section02 .list-group .list-group-item {
+   margin-bottom: -1px;
 }
 
 #section02 .list-group .nav-link {
@@ -150,27 +181,39 @@ body {
 
 #section02 .card-body h5 {
    margin: 0;
-   padding-top: 0.2rem;
-
    font-size: 1.1rem;
 }
 
 #section02 .card-body p {
    margin: 0;
-   padding-top: 0.2rem;
 }
 
-#section02 .card-body span {
-   padding-top: 0.2rem;
-}
-
-/* section03 莊園位置 --------------------------------------------------------------------------------------------*/
+/* section03 周邊景點 --------------------------------------------------------------------------------------------*/
 #section03 {
-   background: var(--coffee4);
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-#section03 h3 {
+#section03 .container {
+   padding: 1rem;
+}
+
+#section03 h1 {
    text-align: center;
+   padding-bottom: 0.5rem;
+   color: var(--coffee5);
+}
+
+#section03 > .container > .row {
+   box-shadow: var(--shadow2);
+   background: var(--white50);
+}
+
+#section03 .col-lg-3 {
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-bottom: 1rem;
 }
 
 #section03 .view {
@@ -209,15 +252,12 @@ body {
    background-color: rgba(0, 0, 0, 0.6);
 }
 
-#section03 .col-lg-3 {
-   padding-left: 10px;
-   padding-right: 10px;
-   margin-bottom: 1rem;
-}
-
 /* section04 莊園位置 --------------------------------------------------------------------------------------------*/
 #section04 {
    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 #section04 .embed-responsive {
@@ -251,7 +291,6 @@ body {
    border-radius: 0.25rem;
    padding: 0.5rem;
    box-shadow: var(--shadow1);
-
    position: relative;
 }
 
@@ -285,7 +324,7 @@ body {
 }
 
 #accordion:checked + #kaifu_accordion {
-   transform: translateX(100%);
+   transform: translateX(98%);
 }
 
 .close:focus {
@@ -309,15 +348,27 @@ body {
 
 /* section05 聯絡我們 --------------------------------------------------------------------------------------------*/
 #section05 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    color: var(--coffee2);
    background: var(--coffee4);
 }
 
+#section05 h1 {
+   text-align: center;
+   padding-bottom: 0.5rem;
+}
+
 #section05 h5 {
    font-size: 1.45rem;
+   text-align: center;
+   margin-bottom: 0.2rem !important;
 }
 
 #section05 small {
+   display: block;
+   text-align: center;
    font-size: 0.9rem;
 }
 
@@ -360,6 +411,11 @@ option:checked {
 }
 
 /* section06 咖啡故事 --------------------------------------------------------------------------------------------*/
+#section06 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 #section06 #nav-img {
    box-shadow: var(--shadow3);
 }
@@ -419,8 +475,9 @@ option:checked {
    }
 
    /* section03 */
-   #section03 .container {
-      width: 95%;
+
+   #section03 .container .row {
+      background: var(--coffee4);
    }
 
    /* section04 */
@@ -457,35 +514,40 @@ option:checked {
       height: 100vh;
    }
 
-   /* section02 */
+   /* section02 ------------------------------------------------------------------- */
    #section02 .container {
-      height: 80% !important;
-      box-shadow: var(--shadow2);
+      background: none;
+      padding: 0;
+   }
+
+   #section02 > .container > .row {
+      background-color: var(--white50);
+      padding: 1rem 0.6rem 0 0;
+   }
+
+   /* section03 ------------------------------------------------------------------- */
+   #section03 {
+      background: none;
+   }
+   #section03 > .container > .row {
+      background-color: var(--black50);
       padding: 1.5rem 2rem 0;
-      padding-top: 1.5rem;
    }
 
-   #section02 .row {
-      height: 100% !important;
-   }
-
+   /* section04 ------------------------------------------------------------------- */
    #section04 .infomation .accordion {
       width: 40%;
    }
 
-   /* section03 */
-   #section03 h3 {
-      display: none;
+   /* section05 */
+   #section05 h5 {
+      font-size: 1.6rem;
+      text-align: left;
    }
 
-   /* section06 */
-   #section06 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-   #section06 h1 {
-      display: none;
+   #section05 small {
+      text-align: left;
+      font-size: 1rem;
    }
 }
 /* xl 1200 以上*/
@@ -504,76 +566,69 @@ header {
    -webkit-transform: translateY(0);
 }
 
-/* 往下滑動可以隱藏選單 */
-.hide-nav {
+/* 往下滑動可以隱藏選單，移除就變成固定 navbar */
+/* .hide-nav {
    transform: translateY(-120%) !important;
    -webkit-transform: translateY(-120%) !important;
-}
+} */
 
 /* 選單滑動底線效果 */
 ul.menu-left {
-   -webkit-transition: all 0.3s ease-out;
+   /* -webkit-transition: all 0.3s ease-out;
    -moz-transition: all 0.3s ease-out;
    -ms-transition: all 0.3s ease-out;
-   -o-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out; */
    transition: all 0.3s ease-out;
 }
 .menu-left a {
+   /* 轉場只需要內容寬度 */
    display: inline-block;
    position: relative;
-   transition: color 0.35s ease;
    /* 底線間距 */
    padding-bottom: 0.5rem;
+   /* 連結文字顏色轉場 */
+   transition: color 0.35s ease;
 }
 
-/* display:block 可以不用寫，因為變成絕對定位就是緊縮的區塊 */
-ul.menu-left {
-   -webkit-transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;
-   -ms-transition: all 0.3s ease-out;
-   -o-transition: all 0.3s ease-out;
-   transition: all 0.3s ease-out;
-}
-.menu-left a {
-   display: inline-block;
-   position: relative;
-   transition: color 0.35s ease;
-   /* 底線間距 */
-   padding-bottom: 0.5rem;
-}
+/* before 沒有寬度，只有高度 1px，且對齊左下角，背景目前為透明色 */
 .menu-left a:before {
    content: '';
-   display: block;
+   width: 0;
+   height: 1px;
    position: absolute;
    left: 0;
    bottom: 0;
-   height: 1px;
-   width: 0;
-   transition: width 0s ease, background 0.35s ease;
-}
-.menu-left a:after {
-   content: '';
-   display: block;
-   position: absolute;
-   right: 0;
-   bottom: 0;
-   height: 1px;
-   width: 0;
-   background: #fff;
    transition: width 0.35s ease;
 }
+
+/* 轉場效果，滑鼠移上 before，寬度從 0 變長 100%（對齊左下角，由左至右） */
+/* 背景其實已經先填滿整個父層寬度，但因為沒有寬度，看不到白色背景，當發生轉場時，寬度會慢慢變長，漸漸顯示白色背景 */
+/* 回場效果，滑鼠移開時，寬度由 100% => 0%，但因為回場也只有寬度，背景在回場一開始時就會直接透明，所以會有瞬間不見的視覺 */
 .menu-left a:hover:before {
    width: 100%;
    background: #fff;
+}
+
+/* after 沒有寬度，只有高度 1px，且對齊右下角，且填滿高度 1px 白色背景，但因為沒有寬度所以看不到白色背景 */
+.menu-left a:after {
+   content: '';
+   width: 0;
+   height: 1px;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   background: #fff;
    transition: width 0.35s ease;
 }
+
+/* 轉場效果，滑鼠移上 after，寬度會從 0 變成 100%（對齊右下角，由右至左），而顏色從白色瞬間變成透明，也就是沒有轉場效果 */
+/* 回場效果，滑鼠放開時，一樣只有寬度做回場，此時寬度是 100%，100% => 0，也就是會看到透明會漸漸吃掉白色的視覺 */
 .menu-left a:hover:after {
    width: 100%;
    background: transparent;
-   transition: all 0s ease;
 }
 
-/* 第二種選單效果 */
+/* 第二種選單滑動效果 */
 /* .menu-left a:before {
    content: '';
    border-bottom: 1px solid #fff;
@@ -605,19 +660,22 @@ ul.menu-left {
 #go_top_page {
    width: 50px;
    height: 50px;
-   background: var(--coffee5);
+   background: var(--coffee3);
    border-radius: 50%;
    position: fixed;
-   right: 60px;
+   right: 20px;
    bottom: 0;
    z-index: 9999;
+
+   box-shadow: inset 0 0 0 2px var(--coffee3), inset 0 0 0 4px var(--coffee5);
 }
 
 #go_top_page a {
    display: block;
+   font-size: 1.5rem;
    text-align: center;
    line-height: 50px;
-   color: var(--coffee1);
+   color: var(--coffee5);
    text-decoration: none;
 }
 

@@ -4,7 +4,8 @@
       <!-- Required meta tags -->
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <title>泰山咖啡莊園 - Coding的好地方</title>
+      <meta name="description" content="泰山咖啡莊園，提供完善的前端、後端技術設計課程，由淺至進階學習，擁有寬敞明亮的學習空間及雙螢幕教學設備，您強化職場競爭力的首選。" />
+      <title>泰山咖啡莊園-Coding的好地方</title>
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="css/bootstrap.css" />
 
@@ -29,8 +30,18 @@
    <body data-spy="scroll" data-target="#coffee-navbar">
       <!-- loading -->
       <!-- <div id="loading" class="position-relative">
-         <div id="loading-txt" class="h5 text-coffee position-absolute"></div>
-         <img src="images/loading.svg" alt="" width="150" height="150" />
+         <div id="loading-txt" class="h6 position-absolute" style="color: black; top: 50%; left: 50%; transform: translate(-50%, 0%);">
+            <span style="font-size: 1.2rem;"></span>
+         </div>
+         <img src="images/loading.svg" alt="" width="100" height="100" />
+      </div> -->
+
+      <!-- <div id="loading" class="position-relative">
+         <div class="progress w-100" style="height: 1px;">
+            <div id="loading-txt" class="progress-bar progress-bar-animated" style="background: var(--coffee2);">
+               <span class="position-absolute" style="left: 50%; top: 48%; transform: translate(-50%, -50%); font-size: 1.5rem;"></span>
+            </div>
+         </div>
       </div> -->
 
       <!-- content -->
@@ -38,8 +49,11 @@
          <!-- particles -->
          <div id="particles-js" class="position-fixed h-100 w-100" style="z-index: 1; pointer-events: none;"></div>
          <!-- 導覽列區 ------------------------------------------------------------------------------------------- -->
-         <header id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-1">
-            <a class="navbar-brand" href="#section01"><img src="images/logo.png" alt="泰山咖啡" width="50" /><span class="ml-2 align-middle">泰山咖啡莊園</span></a>
+         <!-- .logo  -->
+         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-1">
+            <div class="menu-left">
+               <a class="navbar-brand" href="#section01"><img src="images/logo.png" alt="泰山咖啡" width="40" /><span class="ml-2 align-middle">泰山咖啡莊園</span></a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#coffee-navbar">
                <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,6 +78,7 @@
                   </li>
                </ul>
 
+               <!-- .menu-left 連結底線滑動效果 -->
                <ul class="login navbar-nav menu-left ml-lg-4">
                   <li class="nav-item">
                      <a id="btn-login" class="nav-link" href="#login" data-toggle="modal"><i class="fas fa-user mr-1"></i>登入</a>
@@ -74,27 +89,27 @@
                   </li>
                </ul>
             </div>
-         </header>
+         </nav>
 
          <!-- Modal 登入 -->
          <form>
             <div class="modal fade" id="login">
-               <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-dialog modal-dialog-centered modal-sm">
                   <div class="modal-content p-3">
-                     <div class="modal-header">
+                     <div class="modal-header p-0">
                         <h5 class="modal-title">會員登入</h5>
                         <button type="button" class="close" data-dismiss="modal">
                            <span>&times;</span>
                         </button>
                      </div>
-                     <div class="modal-body">
-                        <div class="form-group">
-                           <label for="login_id">帳號：</label>
-                           <input type="text" class="form-control" id="login_id" />
+                     <div class="modal-body p-0">
+                        <div class="form-group mb-0">
+                           <label for="login_id" class="col-form-label">帳號：</label>
+                           <input type="text" class="form-control form-control-sm" id="login_id" />
                         </div>
                         <div class="form-group">
-                           <label for="login_pw">密碼：</label>
-                           <input type="password" class="form-control" id="login_pw" />
+                           <label for="login_pw" class="col-form-label">密碼：</label>
+                           <input type="password" class="form-control form-control-sm" id="login_pw" />
                         </div>
                      </div>
                      <div class="modal-footer d-flex justify-content-center">
@@ -110,26 +125,26 @@
          <!-- Modal 註冊 -->
          <form>
             <div class="modal fade" id="register">
-               <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-dialog modal-dialog-centered modal-sm">
                   <div class="modal-content p-3">
-                     <div class="modal-header">
+                     <div class="modal-header p-0">
                         <h5 class="modal-title">會員註冊</h5>
                         <button type="button" class="close" data-dismiss="modal">
                            <span>&times;</span>
                         </button>
                      </div>
-                     <div class="modal-body">
-                        <div class="form-group">
-                           <label for="reg_id">帳號：</label>
-                           <input type="text" class="form-control" id="reg_id" />
+                     <div class="modal-body p-0">
+                        <div class="form-group mb-1">
+                           <label for="reg_id" class="col-form-label">帳號：</label>
+                           <input type="text" class="form-control form-control-sm" id="reg_id" />
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-1">
                            <label for="reg_pw">密碼：</label>
-                           <input type="password" class="form-control" id="reg_pw" />
+                           <input type="password" class="form-control form-control-sm" id="reg_pw" />
                         </div>
                         <div class="form-group">
                            <label for="reg_pw2">確認密碼：</label>
-                           <input type="password" class="form-control" id="reg_pw2" />
+                           <input type="password" class="form-control form-control-sm" id="reg_pw2" />
                         </div>
                      </div>
                      <div class="modal-footer d-flex justify-content-center">
@@ -185,17 +200,18 @@
          </section>
 
          <!-- 各式餐飲 section02 --------------------------------------------------------------------------------- -->
-         <section id="section02" class="d-flex justify-content-center align-items-center" data-parallax="scroll" data-bleed="50" data-image-src="./images/parallax_01.jpg" data-natural-width="1800" data-natural-height="900">
+         <section id="section02">
             <div class="container">
+               <h1>咖啡飲品</h1>
                <!-- row -->
                <div class="row">
                   <div class="col-12 col-lg-2">
-                     <ul class="list-group list-group-flush flex-row flex-lg-column">
+                     <ul class="list-group list-group-flush flex-row justify-content-center flex-lg-column">
                         <li class="list-group-item p-0"><a class="nav-item nav-link active" data-toggle="pill" href="#eat-01">咖啡飲品</a></li>
                         <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-02">特調飲品</a></li>
                         <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-03">手作蛋糕</a></li>
                         <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-04">輕食料理</a></li>
-                        <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-05">燉飯/義大利麵</a></li>
+                        <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-05">義式風味</a></li>
                      </ul>
                   </div>
                   <div class="col-12 col-lg-10">
@@ -285,7 +301,6 @@
                                     <img src="https://picsum.photos/300/200/?random=8" class="card-img-top" />
                                     <div class="card-body">
                                        <h5 class="card-title">冰牛奶</h5>
-                                       <p class="card-text">原味/草莓/香草</p>
                                        <p class="card-text">各式風味獨特經典飲品</p>
                                        <span>NT.100</span>
                                     </div>
@@ -296,7 +311,6 @@
                                     <img src="https://picsum.photos/300/200/?random=9" class="card-img-top" />
                                     <div class="card-body">
                                        <h5 class="card-title">風味鮮奶茶</h5>
-                                       <p class="card-text">原味/榛果/黑糖</p>
                                        <p class="card-text">各式味獨特經典飲品</p>
                                        <span>NT.100</span>
                                     </div>
@@ -611,19 +625,18 @@
             </div>
          </section>
 
-         <!-- 視差 -->
-         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=2"></div> -->
-
          <!-- 周邊景點 section03 --------------------------------------------------------------------------------- -->
-         <section id="section03" class="pb-5 pb-lg-0">
-            <div class="container h-100 d-lg-flex flex-lg-column justify-content-lg-center pt-5">
-               <h3>周邊景點</h3>
+         <section id="section03" data-parallax="scroll" data-src="./images/parallax_01.jpg" data-bleed="100" data-natural-width="1920" data-natural-height="1080">
+            <div id="scene1" class="position-absolute" style="z-index: -1;">
+               <div data-depth="0.7"><img src="./images/parallax_01.jpg" alt="" /></div>
+            </div>
+            <div class="container">
+               <h1>周邊景點</h1>
                <div class="row justify-content-lg-center">
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=1" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=1" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">101大樓</h4>
                               <p>淡淡都能運行嚴重問道未知壓縮過了最低素。</p>
@@ -631,11 +644,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=2" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=2" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">國父紀念館</h4>
                               <p>指標一聲無奈，電影歡迎，有限有。</p>
@@ -643,11 +655,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=3" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=3" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">中正紀念堂</h4>
                               <p>交通一聲代理期待消除對比，尤其到底之類，先進用途。</p>
@@ -655,11 +666,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=4" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=4" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">西門町</h4>
                               <p>明天價值感謝他人這種焦點體制刪除活動女生失。</p>
@@ -667,11 +677,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=5" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=5" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">台北東區</h4>
                               <p>平均一場基礎上聯合，一道是個，吃。</p>
@@ -679,11 +688,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=6" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=6" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">士林夜市</h4>
                               <p>病人狀態有時候，海外幾年回頭沒事十。</p>
@@ -691,11 +699,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=7" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=7" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">陽明山國家公園</h4>
                               <p>不是很，看過更為是指那麼，放在影視沒想到，設為明顯，股。</p>
@@ -703,11 +710,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=8" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=8" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">台北市立動物園</h4>
                               <p>很大外掛升級，本網個人故障，上。</p>
@@ -715,11 +721,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=9" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=9" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">淡水老街</h4>
                               <p>填寫就在德國一座其中合作留學故意成本人家麻煩多多小時市委利。</p>
@@ -727,11 +732,10 @@
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-6 col-lg-3">
                      <a href="https://picsum.photos/1920/1280/?random=10" class="image-popup-no-margins">
                         <div class="view">
                            <img src="https://picsum.photos/1920/1280/?random=10" class="img-fluid" />
-
                            <div class="text">
                               <h4 class="text-center">萬華龍山寺</h4>
                               <p>頓時接口歌曲針對感染實施同事，被人包含。</p>
@@ -742,9 +746,6 @@
                </div>
             </div>
          </section>
-
-         <!-- 視差 -->
-         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=3"></div> -->
 
          <!-- 莊園位置 section04 --------------------------------------------------------------------------------- -->
          <section id="section04">
@@ -846,28 +847,26 @@
             </div>
          </section>
 
-         <!-- 視差 -->
-         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=4"></div> -->
-
          <!-- 聯絡我們 section05 --------------------------------------------------------------------------------- -->
          <section id="section05">
-            <div class="container h-100">
-               <form class="d-flex align-items-center h-100" novalidate>
+            <div class="container">
+               <h1>聯絡我們</h1>
+               <form class="d-flex align-items-center">
                   <div class="row">
                      <div class="col-12 mb-2">
-                        <h5 class="m-0">泰山咖啡莊園，傳承熱情coding精神</h5>
-                        <small>任何服務問題或建議，歡迎您透過客服表單告知我們，謝謝!</small>
+                        <h5 class="m-0">泰山咖啡莊園，傳承熱情 coding 精神</h5>
+                        <small>任何服務問題或建議，歡迎您透過客服表單告知我們，謝謝！</small>
                      </div>
                      <div class="col-lg-6">
                         <label for="q_name"><h6 class="m-0">姓名</h6></label>
                         <div class="input-group mb-3">
-                           <input id="q_name" type="text" class="form-control" />
+                           <input id="q_name" type="text" class="form-control" required />
                            <div class="input-group-append">
                               <div class="input-group-text">
                                  <label for="q_male" class="m-0 mr-1">先生</label>
-                                 <input id="q_male" class="mr-3" type="radio" name="gender" />
+                                 <input id="q_male" class="mr-3" type="radio" name="gender" required />
                                  <label for="q_female" class="m-0 mr-1">女士</label>
-                                 <input id="q_female" type="radio" name="gender" />
+                                 <input id="q_female" type="radio" name="gender" required />
                               </div>
                            </div>
                         </div>
@@ -875,19 +874,19 @@
                      <div class="col-lg-6">
                         <label for="q_tel"><h6 class="m-0">電話</h6></label>
                         <div class="input-group mb-3">
-                           <input id="q_tel" type="tel" class="form-control" />
+                           <input id="q_tel" type="tel" class="form-control" required />
                         </div>
                      </div>
                      <div class="col-lg-6">
                         <label for="q_email"><h6 class="m-0">電子信箱</h6></label>
                         <div class="input-group mb-3">
-                           <input id="q_email" type="email" class="form-control" />
+                           <input id="q_email" type="email" class="form-control" required />
                         </div>
                      </div>
                      <div class="col-lg-6">
                         <label for="q_type"><h6 class="m-0">問題類型</h6></label>
                         <div class="input-group mb-3">
-                           <select id="q_type" class="custom-select">
+                           <select id="q_type" class="custom-select" required>
                               <option value="餐飲建議" selected>餐飲建議</option>
                               <option value="服務品質">服務品質</option>
                               <option value="其他">其他</option>
@@ -897,7 +896,7 @@
                      <div class="col-12">
                         <label for="q_comment"><h6 class="m-0">意見需求</h6></label>
                         <div class="input-group mb-3">
-                           <textarea id="q_comment" class="form-control" rows="5" name="q_comment"></textarea>
+                           <textarea id="q_comment" class="form-control" rows="5" name="q_comment" required></textarea>
                         </div>
                      </div>
                      <div class="col-12">
@@ -908,7 +907,6 @@
                            </div>
                         </div>
                      </div>
-
                      <div class="col-12">
                         <div class="input-group justify-content-center">
                            <button class="btn btn-coffee" type="submit">送出</button>
@@ -919,10 +917,12 @@
             </div>
          </section>
 
-         <!-- 視差 -->
-         <!-- <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/1920/1080/?random=1"></div> -->
          <!-- 咖啡故事 section06 --------------------------------------------------------------------------------- -->
-         <section id="section06" data-parallax="scroll" data-bleed="50" data-image-src="./images/parallax_01.jpg" data-natural-width="1800" data-natural-height="900">
+         <!-- data-parallax="scroll" data-src="./images/parallax_01.jpg" data-bleed="100" data-natural-width="1920" data-natural-height="1080" -->
+         <section id="section06">
+            <div id="scene2" class="position-absolute" style="z-index: -1;">
+               <div data-depth="0.1"><img src="./images/parallax_02.jpg" alt="" /></div>
+            </div>
             <div class="container">
                <h1 class="text-center text-white py-4">咖啡故事</h1>
                <div class="row">
@@ -974,6 +974,8 @@
                   </div>
                </div>
             </div>
+            <!-- section06 裝飾區 -->
+            <div class="menuboard"></div>
          </section>
          <!-- footer 頁尾 ---------------------------------------------------------------------------------------- -->
          <footer id="footer">
@@ -999,8 +1001,9 @@
             </div>
          </footer>
          <!-- 回到頂端 -->
+         <!-- https://unicode-table.com/en/ -->
          <div id="go_top_page" class="animate__animated animate__bounce animate__slower" style="animation-iteration-count: infinite;">
-            <a href="#section01">TOP</a>
+            <a href="#section01"><i class="fas fa-chevron-up"></i></a>
          </div>
       </div>
       <!-- content end -->
@@ -1023,10 +1026,14 @@
       <!-- 捲動 smooth 效果 -->
       <script src="js/jquery.easeScroll.js"></script>
 
-      <!-- 視差1 http://pixelcog.github.io/parallax.js/ -->
-      <script src="js/parallax.min.js"></script>
+      <!-- 視差1 https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha -->
+      <script src="js/jquery.parallax.min.js"></script>
 
-      <!-- 視差2 -->
+      <!-- 視差2 https://matthew.wagerfield.com/parallax/ 
+         此套件直接用 cdn 的，下載的都有錯
+      -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
       <!--
          magnific-popup 
         網站：https://dimsemenov.com/plugins/magnific-popup/
@@ -1047,6 +1054,12 @@
       <script src="js/particles_app.js"></script>
 
       <script>
+         var scene1 = document.querySelector('#scene1');
+         var scene2 = document.querySelector('#scene2');
+
+         var parallax1 = new Parallax(scene1);
+         var parallax2 = new Parallax(scene2);
+
          // 阻止最小尺寸時點選輪播圖左、右按鈕，往上移動
          // 阻止 咖啡故事按下 tab 按鈕，跳回頂部
          $('.carousel-control-prev,.carousel-control-next,#btn-login,#btn-register,[data-toggle="pill"],[data-toggle="tab"]').on('click', function (event) {
@@ -1079,32 +1092,61 @@
             $('#nav-img').attr('src', 'images/section02_03.jpg');
          });
 
+         // 回到頂端
+         $('#go_top_page').css({ display: 'none' });
+         let nowloc = 0;
+         $(window).on('scroll', function () {
+            nowloc = $(window).scrollTop();
+            if (nowloc > 500) {
+               $('#go_top_page').fadeIn(1000);
+            } else {
+               $('#go_top_page').fadeOut(1000);
+            }
+         });
+         setInterval(() => {
+            if ($(window).scrollTop() === nowloc) {
+               $('#go_top_page').fadeOut(1000);
+            } else {
+               $('#go_top_page').fadeIn(1000);
+            }
+         }, 8000);
+
          // loading 01
          // $('#content').css('display', 'none');
          // $(window).on('load', function () {
-         //     $('#loading').fadeOut(1000, function () {
-         //         $('#content').fadeIn(1000);
-         //     });
+         //    $('#loading').fadeOut(1000, function () {
+         //       $('#content').fadeIn(1000);
+         //    });
          // });
 
-         // loading 02
+         // // loading 02
          // $('#content').hide();
          // $(window).on('load', function () {
-         //     let loadingPerc = 0;
-         //     let loading = setInterval(() => {
-         //         if (loadingPerc >= 100) {
-         //             $('#loading').fadeOut();
-         //             $('#content').fadeIn();
-         //             new WOW().init();
-         //             clearInterval(loading);
-         //         } else {
-         //             loadingPerc += 4;
-         //             $('#loading-txt').css({
-         //                 // width: loadingPerc + '%',
-         //             });
-         //             $('#loading-txt').text(loadingPerc + '%');
-         //         }
-         //     }, 50);
+         //    //  載入進度百分比數字
+         //    let loadingPerc = 0;
+         //    let loading = setInterval(() => {
+         //       // 載入進度百分比 100 要做的事
+         //       if (loadingPerc >= 100) {
+         //          clearInterval(loading);
+         //          $('#loading').fadeOut(function () {
+         //             // d-flex 是 !important，必須先remove，才能加入 display none
+         //             $('#loading').removeClass('d-flex').css({ display: 'none' });
+         //          });
+         //          $('#content').fadeIn(2000);
+
+         //          // 載入進度百分比未達 100 要做的事
+         //       } else {
+         //          // 每隔一段時間 loadingPerc 累加 1
+         //          loadingPerc += 1;
+
+         //          // for bootstrap progress bar
+         //          $('#loading-txt').css({
+         //             width: loadingPerc + '%'
+         //          });
+         //          // 改變文字內容
+         //          $('#loading-txt span').text(loadingPerc + '%');
+         //       }
+         //    }, 50);
          // });
 
          // 啟動彈出訊息框
