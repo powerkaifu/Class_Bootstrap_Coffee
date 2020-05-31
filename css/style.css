@@ -9,7 +9,9 @@
    --black25: rgba(0, 0, 0, 0.25) !important;
    --black50: rgba(0, 0, 0, 0.5) !important;
    --black75: rgba(0, 0, 0, 0.75) !important;
+   --white25: rgba(255, 255, 255, 0.25) !important;
    --white50: rgba(255, 255, 255, 0.5) !important;
+   --white50: rgba(255, 255, 255, 0.75) !important;
    --shadow1: 0 0 5px var(--black25) !important;
    --shadow2: 0 0 10px var(--black50) !important;
    --shadow3: 0 0 15px var(--black75) !important;
@@ -54,13 +56,14 @@
 
 /* body  --------------------------------------------------------------------------------------------------------*/
 body {
-   font-family: '微軟正黑體', sans-serif;
+   font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
    background-color: var(--coffee1);
 }
 
 /* 導覽列 -------------------------------------------------------------------------------------------------------*/
 #navbar {
-   background: linear-gradient(180deg, black 20%, transparent);
+   background: linear-gradient(180deg, black 40%, transparent);
+   transition: 0.3s;
 }
 /* section01 輪播圖 ---------------------------------------------------------------------------------------------*/
 .carousel-control-prev,
@@ -114,6 +117,17 @@ body {
    overflow: hidden;
 }
 
+/* section01 輪播圖(頂端) ----------------------------------------------------------------------------------------*/
+#section01 {
+   padding-top: 60px;
+}
+
+/* 575px 最小尺寸，登入、註冊區會呈現水平顯示  */
+.login {
+   display: flex;
+   flex-direction: row;
+}
+
 /* section02 咖啡餐飲 --------------------------------------------------------------------------------------------*/
 #section02 {
    display: flex;
@@ -124,11 +138,7 @@ body {
 
 #section02 .container {
    padding: 1rem;
-   background: var(--white50);
-}
-
-#section02 > .container > .row {
-   box-shadow: var(--shadow2);
+   background: var(--coffee4);
 }
 
 #section02 .container h1 {
@@ -137,7 +147,12 @@ body {
 }
 
 #section02 .list-group {
-   font-size: 1.2rem;
+   font-size: 1rem;
+   margin: 1rem 0;
+}
+
+#section02 .list-group-flush > .list-group-item:last-child {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 #section02 .list-group .list-group-item {
@@ -206,8 +221,8 @@ body {
 }
 
 #section03 > .container > .row {
-   box-shadow: var(--shadow2);
-   background: var(--white50);
+   background: var(--coffee4);
+   padding: 1rem 1rem 0 1rem;
 }
 
 #section03 .col-lg-3 {
@@ -279,7 +294,6 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: flex-end;
 
    overflow-x: hidden;
 }
@@ -319,6 +333,7 @@ body {
    cursor: pointer;
 }
 
+/* 手風琴 交通資訊  */
 #kaifu_accordion {
    transition: 1s;
 }
@@ -353,6 +368,11 @@ body {
    align-items: center;
    color: var(--coffee2);
    background: var(--coffee4);
+   padding: 2rem 0;
+}
+
+#section05 .container {
+   width: 95%;
 }
 
 #section05 h1 {
@@ -415,7 +435,9 @@ option:checked {
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 2rem 0;
 }
+
 #section06 #nav-img {
    box-shadow: var(--shadow3);
 }
@@ -436,15 +458,15 @@ option:checked {
 /* #footer ------------------------------------------------------------------------------------------------------*/
 #footer {
    color: var(--coffee5);
-   /* background: var(--coffee1); */
-   background: linear-gradient(0deg, var(--coffee1) 40%, transparent);
    padding: 1rem 0;
+   background: var(--coffee1);
+   box-shadow: 0 -10px 10px var(--black50);
 }
 
 /* 裝置斷點控制區 -------------------------------------------------------------------------------------------------*/
 /* xs 575 以下*/
 @media (max-width: 575px) {
-   /* 粒子 */
+   /* 粒子，若怕影響視覺，可以在此尺寸關閉 */
    #particles-js {
       width: 100vw;
       height: 100vh;
@@ -454,53 +476,7 @@ option:checked {
       background: var(--coffee1);
    }
 
-   /* section01 */
-   #section01 {
-      margin-top: 60px;
-   }
-
-   .login {
-      display: flex;
-      flex-direction: row;
-   }
-
-   /* section02 */
-   #section02 .list-group {
-      font-size: 1rem;
-      margin: 1rem 0;
-   }
-
-   #section02 .list-group-flush > .list-group-item:last-child {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-   }
-
-   /* section03 */
-
-   #section03 .container .row {
-      background: var(--coffee4);
-   }
-
-   /* section04 */
-   #section04 .infomation .accordion {
-      width: 100%;
-   }
-
-   /* section05 */
-   #section05 {
-      padding: 2rem 0;
-   }
-   #section05 .container {
-      width: 95%;
-   }
-
    /* secttion06 */
-   #section06 {
-      padding: 2rem 0;
-   }
-}
-
-/* md 768 以上 */
-@media (min-width: 768px) {
 }
 
 /* lg 992 以上 */
@@ -523,6 +499,7 @@ option:checked {
    #section02 > .container > .row {
       background-color: var(--white50);
       padding: 1rem 0.6rem 0 0;
+      box-shadow: var(--shadow2);
    }
 
    /* section03 ------------------------------------------------------------------- */
@@ -539,6 +516,10 @@ option:checked {
       width: 40%;
    }
 
+   #section04 .infomation {
+      align-items: flex-end;
+   }
+
    /* section05 */
    #section05 h5 {
       font-size: 1.6rem;
@@ -549,9 +530,6 @@ option:checked {
       text-align: left;
       font-size: 1rem;
    }
-}
-/* xl 1200 以上*/
-@media (min-width: 1200px) {
 }
 
 /* 其他功能 -------------------------------------------------------------------------------------------------------------*/
