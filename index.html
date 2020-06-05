@@ -10,19 +10,26 @@
       <link rel="stylesheet" href="css/bootstrap.css" />
 
       <!-- Favicon -->
+      <!-- https://www.ifreesite.com/favicon/ -->
       <link rel="shortcut icon" href="images/favicon.ico" />
+
       <!-- FontAwesome CSS -->
       <link rel="stylesheet" href="css/fontawesome.min.css" />
+
+      <!-- magnific-popup CSS -->
       <link rel="stylesheet" href="css/magnific-popup.css" />
       <link rel="stylesheet" href="css/magnific-popup-single.css" />
+
       <!-- animate.css -->
-      <link rel="stylesheet" href="css/animate.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" />
       <!-- My Style CSS -->
       <link rel="stylesheet" href="css/style.css" />
    </head>
 
    <body data-spy="scroll" data-target="#coffee-navbar">
-      <div id="loading" class="position-relative">
+      <!-- loading -->
+      <div id="loading" class="position-fixed" style="z-index: 9999 !important;">
          <div class="progress w-100" style="height: 1px;">
             <div id="loading-txt" class="progress-bar progress-bar-animated" style="background: var(--coffee2);">
                <span class="position-absolute" style="left: 50%; top: 48%; transform: translate(-50%, -50%); font-size: 1.5rem;"></span>
@@ -32,11 +39,9 @@
 
       <!-- content -->
       <div id="content">
-         <!-- particles -->
-         <div id="particles-js" class="position-fixed h-100 w-100" style="z-index: 1; pointer-events: none;"></div>
          <!-- 導覽列區 ------------------------------------------------------------------------------------------- -->
          <!-- .logo  -->
-         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-1">
+         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="menu-left">
                <a class="navbar-brand" href="#section01"><img src="images/logo.png" alt="泰山咖啡" width="40" /><span class="ml-2 align-middle">泰山咖啡莊園</span></a>
             </div>
@@ -44,34 +49,33 @@
                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-lg-end" id="coffee-navbar">
-               <!-- .menu-left 連結底線滑動效果 -->
-               <ul class="navbar-nav menu-left">
+            <!-- #coffee-navbar  -->
+            <div id="coffee-navbar" class="collapse navbar-collapse justify-content-lg-end">
+               <ul id="main_menu" class="navbar-nav menu-left">
                   <li class="nav-item">
-                     <a class="nav-link" href="#section02"><i class="fas fa-hamburger mr-1"></i>咖啡餐飲</a>
+                     <a class="nav-link" href="#section02"><i class="fas fa-hamburger"></i>菜單餐點</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#section03"><i class="fas fa-bus mr-1"></i>周邊景點</a>
+                     <a class="nav-link" href="#section03"><i class="fas fa-bus"></i>周邊景點</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#section04"><i class="fas fa-map-marked-alt mr-1"></i>莊園位置</a>
+                     <a class="nav-link" href="#section04"><i class="fas fa-map-marked-alt"></i>莊園位置</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#section05"><i class="fas fa-envelope mr-1"></i>聯絡我們</a>
+                     <a class="nav-link" href="#section05"><i class="fas fa-envelope"></i>聯絡我們</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#section06"><i class="fas fa-coffee mr-1"></i>咖啡故事</a>
+                     <a class="nav-link" href="#section06"><i class="fas fa-coffee"></i>咖啡故事</a>
                   </li>
                </ul>
 
-               <!-- .menu-left 連結底線滑動效果 -->
-               <ul class="login navbar-nav menu-left ml-lg-4">
+               <ul id="login_menu" class="navbar-nav menu-left">
                   <li class="nav-item">
-                     <a id="btn-login" class="nav-link" href="#login" data-toggle="modal"><i class="fas fa-user mr-1"></i>登入</a>
+                     <a id="btn-login" class="nav-link" href="#login" data-toggle="modal"><i class="fas fa-user"></i>登入</a>
                   </li>
-                  <span class="text-secondary px-1" style="line-height: 40px;">|</span>
+                  <span class="mx-1" style="line-height: 40px; color: var(--white50);">|</span>
                   <li class="nav-item">
-                     <a id="btn-register" class="nav-link" href="#register" data-toggle="modal"><i class="fas fa-address-book mr-1gister"></i> 註冊</a>
+                     <a id="btn-register" class="nav-link" href="#register" data-toggle="modal"><i class="fas fa-address-book"></i> 註冊</a>
                   </li>
                </ul>
             </div>
@@ -81,8 +85,8 @@
          <form>
             <div class="modal fade" id="login">
                <div class="modal-dialog modal-dialog-centered modal-sm">
-                  <div class="modal-content p-3">
-                     <div class="modal-header p-0">
+                  <div class="modal-content">
+                     <div class="modal-header">
                         <h5 class="modal-title">會員登入</h5>
                         <button type="button" class="close" data-dismiss="modal">
                            <span>&times;</span>
@@ -91,11 +95,11 @@
                      <div class="modal-body p-0">
                         <div class="form-group mb-0">
                            <label for="login_id" class="col-form-label">帳號：</label>
-                           <input type="text" class="form-control form-control-sm" id="login_id" />
+                           <input id="login_id" type="text" class="form-control form-control-sm" />
                         </div>
                         <div class="form-group">
                            <label for="login_pw" class="col-form-label">密碼：</label>
-                           <input type="password" class="form-control form-control-sm" id="login_pw" />
+                           <input id="login_pw" type="password" class="form-control form-control-sm" />
                         </div>
                      </div>
                      <div class="modal-footer d-flex justify-content-center">
@@ -112,8 +116,8 @@
          <form>
             <div class="modal fade" id="register">
                <div class="modal-dialog modal-dialog-centered modal-sm">
-                  <div class="modal-content p-3">
-                     <div class="modal-header p-0">
+                  <div class="modal-content">
+                     <div class="modal-header">
                         <h5 class="modal-title">會員註冊</h5>
                         <button type="button" class="close" data-dismiss="modal">
                            <span>&times;</span>
@@ -144,7 +148,6 @@
          <!-- Modal 註冊 end -->
 
          <!-- 輪播圖 section01 --------------------------------------------------------------------------------- -->
-         <!-- section id 區、carsousel id 區、圖片區 三個都要設成 h-100，scrollpage 才會滑動到正常位置-->
          <section id="section01">
             <div id="coffee-carousel" class="carousel slide carousel-fade h-100" data-ride="carousel" data-interval="8000">
                <!-- 指示器 -->
@@ -183,15 +186,27 @@
                   <span class="sr-only">Next</span>
                </a>
             </div>
+
+            <!-- textillate.js -->
+            <div id="textillate" class="d-none">
+               <ul class="textillate_texts">
+                  <li>香濃原味，伴你悠閒享生活</li>
+                  <li>輕鬆愉悅重溫浪漫時光</li>
+                  <li>與你相約戀上幸福好味道</li>
+                  <li>用對待人生的態度，對待一杯咖啡</li>
+                  <li>簡單即是美，一杯一世界</li>
+               </ul>
+            </div>
          </section>
 
-         <!-- 各式餐飲 section02 --------------------------------------------------------------------------------- -->
+         <!-- 菜單餐點 section02 --------------------------------------------------------------------------------- -->
          <section id="section02">
             <div class="container">
-               <h1>咖啡飲品</h1>
-               <!-- row -->
+               <h1 class="position-relative wow fadeInUp" data-wow-duration="2s" data-wow-offset="300" data-wow-iteration="1" data-wow-delay="1s" style="z-index: 1;">菜單餐點</h1>
+               <!-- 大尺吋 row 分為 2 欄 -->
                <div class="row">
                   <div class="col-12 col-lg-2">
+                     <!-- 列表清單（list group）+ 導覽（Navs） -->
                      <ul class="list-group list-group-flush flex-row justify-content-center flex-lg-column">
                         <li class="list-group-item p-0"><a class="nav-item nav-link active" data-toggle="pill" href="#eat-01">咖啡飲品</a></li>
                         <li class="list-group-item p-0"><a class="nav-item nav-link" data-toggle="pill" href="#eat-02">特調飲品</a></li>
@@ -204,6 +219,7 @@
                      <div class="tab-content">
                         <!-- 咖啡飲品 -->
                         <div class="tab-pane fade show active" id="eat-01">
+                           <!-- 第一列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -246,6 +262,7 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- 第二列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -281,6 +298,7 @@
                         </div>
                         <!-- 特調飲品 -->
                         <div class="tab-pane fade" id="eat-02">
+                           <!-- 第一列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -323,6 +341,7 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- 第二列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -348,6 +367,7 @@
                         </div>
                         <!-- 手作蛋糕 -->
                         <div class="tab-pane fade" id="eat-03">
+                           <!-- 第一列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -390,6 +410,7 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- 第二列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -425,6 +446,7 @@
                         </div>
                         <!-- 輕食料理 -->
                         <div class="tab-pane fade" id="eat-04">
+                           <!-- 第一列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -442,7 +464,6 @@
                                     <div class="card-body">
                                        <h5 class="card-title">炙燒牛肉起司佛卡夏</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
@@ -453,7 +474,6 @@
                                     <div class="card-body">
                                        <h5 class="card-title">塔塔舒肥雞胸佛卡夏</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
@@ -464,12 +484,12 @@
                                     <div class="card-body">
                                        <h5 class="card-title">洋芋起司三重奏熱壓丹麥</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
                               </div>
                            </div>
+                           <!-- 第二列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -477,7 +497,6 @@
                                     <div class="card-body">
                                        <h5 class="card-title">青醬起司雞肉熱壓丹麥</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
@@ -488,7 +507,6 @@
                                     <div class="card-body">
                                        <h5 class="card-title">墨西哥辣味起司熱壓丹麥</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
@@ -499,7 +517,6 @@
                                     <div class="card-body">
                                        <h5 class="card-title">冰釀冰滴卡啡</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
@@ -510,15 +527,15 @@
                                     <div class="card-body">
                                        <h5 class="card-title">韓式泡菜起司雞肉</h5>
                                        <p class="card-text">附前菜沙拉/飲料/蛋糕</p>
-
                                        <span>NT.300</span>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <!-- 燉飯/義大利麵 -->
+                        <!-- 義式風味 -->
                         <div class="tab-pane fade" id="eat-05">
+                           <!-- 第一列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -561,6 +578,7 @@
                                  </div>
                               </div>
                            </div>
+                           <!-- 第二列 -->
                            <div class="row">
                               <div class="col-6 col-lg-3">
                                  <div class="card">
@@ -613,16 +631,22 @@
 
          <!-- 周邊景點 section03 --------------------------------------------------------------------------------- -->
          <section id="section03" data-parallax="scroll" data-src="./images/parallax_01.jpg" data-bleed="100" data-natural-width="1920" data-natural-height="1080">
+            <!-- 視差  parallax.js - Matthew Wagerfield -->
             <div id="scene1" class="position-absolute" style="z-index: -1;">
-               <div data-depth="0.7"><img src="./images/parallax_01.jpg" alt="" /></div>
+               <div class="layer" data-depth="0.5">
+                  <div class="bg1 bleed"></div>
+               </div>
             </div>
+
+            <!-- 粒子效果 particles -->
+            <div id="particles-js" class="position-absolute h-100 w-100" style="z-index: 1; pointer-events: none;"></div>
             <div class="container">
-               <h1>周邊景點</h1>
+               <h1 class="position-relative wow fadeInUp" data-wow-duration="2s" data-wow-offset="300" data-wow-iteration="1" data-wow-delay="1s" style="z-index: 1;">周邊景點</h1>
                <div class="row justify-content-lg-center">
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=1" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=1" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=1" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=1" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">101大樓</h4>
                               <p>淡淡都能運行嚴重問道未知壓縮過了最低素。</p>
@@ -631,9 +655,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=2" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=2" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=2" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=2" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">國父紀念館</h4>
                               <p>指標一聲無奈，電影歡迎，有限有。</p>
@@ -642,9 +666,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=3" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=3" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=3" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=3" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">中正紀念堂</h4>
                               <p>交通一聲代理期待消除對比，尤其到底之類，先進用途。</p>
@@ -653,9 +677,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=4" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=4" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=4" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=4" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">西門町</h4>
                               <p>明天價值感謝他人這種焦點體制刪除活動女生失。</p>
@@ -664,9 +688,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=5" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=5" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=5" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=5" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">台北東區</h4>
                               <p>平均一場基礎上聯合，一道是個，吃。</p>
@@ -675,9 +699,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=6" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=6" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=6" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=6" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">士林夜市</h4>
                               <p>病人狀態有時候，海外幾年回頭沒事十。</p>
@@ -686,9 +710,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=7" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=7" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=7" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=7" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">陽明山國家公園</h4>
                               <p>不是很，看過更為是指那麼，放在影視沒想到，設為明顯，股。</p>
@@ -697,9 +721,9 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=8" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=8" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=8" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=8" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">台北市立動物園</h4>
                               <p>很大外掛升級，本網個人故障，上。</p>
@@ -708,20 +732,20 @@
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=9" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=9" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=9" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=9" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">淡水老街</h4>
-                              <p>填寫就在德國一座其中合作留學故意成本人家麻煩多多小時市委利。</p>
+                              <p>填寫就在德國一座其中合作留學故意成本人家麻煩多利。</p>
                            </div>
                         </div>
                      </a>
                   </div>
                   <div class="col-6 col-lg-3">
-                     <a href="https://picsum.photos/1920/1280/?random=10" class="image-popup-no-margins">
+                     <a href="https://picsum.photos/1920/1080/?random=10" class="image-popup-no-margins">
                         <div class="view">
-                           <img src="https://picsum.photos/1920/1280/?random=10" class="img-fluid" />
+                           <img src="https://picsum.photos/1920/1080/?random=10" class="img-fluid" />
                            <div class="text">
                               <h4 class="text-center">萬華龍山寺</h4>
                               <p>頓時接口歌曲針對感染實施同事，被人包含。</p>
@@ -836,7 +860,7 @@
          <!-- 聯絡我們 section05 --------------------------------------------------------------------------------- -->
          <section id="section05">
             <div class="container">
-               <h1>聯絡我們</h1>
+               <h1 class="position-relative wow fadeInUp" data-wow-duration="2s" data-wow-offset="300" data-wow-iteration="1" data-wow-delay="1s" style="z-index: 1;">聯絡我們</h1>
                <form class="d-flex align-items-center">
                   <div class="row">
                      <div class="col-12 mb-2">
@@ -904,28 +928,30 @@
          </section>
 
          <!-- 咖啡故事 section06 --------------------------------------------------------------------------------- -->
-         <!-- data-parallax="scroll" data-src="./images/parallax_01.jpg" data-bleed="100" data-natural-width="1920" data-natural-height="1080" -->
          <section id="section06">
+            <!-- 視差  parallax.js - Matthew Wagerfield -->
             <div id="scene2" class="position-absolute" style="z-index: -1;">
-               <div data-depth="0.1"><img src="./images/parallax_02.jpg" alt="" /></div>
+               <div class="layer" data-depth="0.5">
+                  <div class="bg2 bleed"></div>
+               </div>
             </div>
             <div class="container">
-               <h1 class="text-center text-white py-4">咖啡故事</h1>
+               <h1 class="position-relative wow fadeInUp" data-wow-duration="2s" data-wow-offset="300" data-wow-iteration="1" data-wow-delay="1s" style="z-index: 1;">咖啡故事</h1>
                <div class="row">
-                  <div class="col-12 col-lg-6">
+                  <div class="col-lg-6">
                      <img id="nav-img" class="h-100 w-100" src="images/section02_01.jpg" style="object-fit: cover; border: 6px solid #fff;" />
                   </div>
-                  <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                  <div class="col-lg-6 mt-3 mt-lg-0">
                      <!-- nav-tab -->
                      <nav>
-                        <div class="nav nav-tabs" id="nav-tab">
+                        <div id="nav-tab" class="nav nav-tabs">
                            <a id="coffee1" class="nav-item nav-link active" data-toggle="tab" href="#coffee-01">咖啡起源</a>
                            <a id="coffee2" class="nav-item nav-link" data-toggle="tab" href="#coffee-02">咖啡好處</a>
                            <a id="coffee3" class="nav-item nav-link" data-toggle="tab" href="#coffee-03">咖啡壞處</a>
                         </div>
                      </nav>
-                     <div class="tab-content bg-white p-3 overflow-auto" data-spy="scroll" data-target="#nav-tabs" style="height: 500px;">
-                        <div class="tab-pane fade show active" id="coffee-01">
+                     <div class="tab-content bg-white p-3 overflow-auto" data-target="#nav-tab" style="height: 500px;">
+                        <div id="coffee-01" class="tab-pane fade show active">
                            <h2>咖啡起源</h2>
                            <p>
                               咖啡的來源已無從稽考，有諸多傳說。相傳，今天的奧羅莫人的祖先被認為是首個認識到咖啡樹令人振奮的效果，雖然沒有直接的證據指出非洲咖啡的增長或是本地人會用它作為興奮劑，甚至早於17世紀已經知道；另一傳說，據說是一千多年以前，在9世紀的衣索比亞西南部的高原地區，一位牧羊人發現他的羊吃了一種植物的種子(咖啡豆)後，變得非常興奮活潑，繼而發現咖啡，但此事截至1671年並沒有得到記載，有可能是杜撰的；也有說法是當地發生過一場野火，燒焦了一片咖啡林，經過燒烤咖啡的香味引起周圍居民注意，人們最初咀嚼這種植物果實來提神，後來烘烤磨碎摻入麵粉做成麵包，作為勇士的食物，提高作戰的勇氣。不過這些傳說故事都缺乏歷史文件佐證，只出現於後世的旅遊傳記中。據說，最初經栽培的咖啡是源自衣索比亞的哈勒爾。
@@ -937,7 +963,7 @@
                               但在西元15世紀以前，咖啡長期被阿拉伯世界所壟斷，僅在回教國家間流傳；當時主要被使用在醫學和宗教上，回教醫生和僧侶們承認咖啡具有提神、醒腦、健胃、強身、止血等功效；15世紀初開始有文獻記載咖啡的使用方式，並且在此時期融入宗教儀式中，同時也出現在民間做為日常飲品。因回教世界嚴禁飲酒，因此咖啡成為當時很重要的社交飲品。直到16、17世紀，透過威尼斯商人和海上霸權荷蘭人的買賣輾轉將咖啡傳入歐洲，很快地，這種充滿東方神秘色彩、口感馥郁香氣迷魅的黑色飲料受到貴族仕紳階級的爭相競逐，咖啡的身價也跟著水漲船高，甚至產生了「黑色金子」的稱號，當時的貴族流行在特殊日子互送咖啡豆以示盡情狂歡，或是給久未謀面的親友，有財入袋、祝賀順遂之意，同時也是身分地位象徵。而「黑色金子」在接下來風起雲湧的大航海時代，藉由海運的傳播，全世界都被納入了咖啡的生產和消費版圖中。
                            </p>
                         </div>
-                        <div class="tab-pane fade" id="coffee-02">
+                        <div id="coffee-02" class="tab-pane fade">
                            <h2>咖啡好處</h2>
                            <p>
                               根據美國俄亥俄州立大學1994年的研究，咖啡因的確能提高清醒度， 能提高細胞內環磷腺?的含量，小劑量能興奮大腦皮層， 振奮精神，改善思維，消除疲勞，加快反應，提昇工作效率。 大劑量則可興奮延腦呼吸中樞和血管運動中樞， 增加呼吸頻率，造成過度刺激，
@@ -946,7 +972,7 @@
                               acid（綠原酸）能很容易地被人體吸收， 具有保護腸道及預防直腸癌的作用。
                            </p>
                         </div>
-                        <div class="tab-pane fade" id="coffee-03">
+                        <div id="coffee-03" class="tab-pane fade">
                            <h2>咖啡壞處</h2>
                            <p>
                               成長中的青少年 對咖啡因的興奮作用較敏感， 比較會有心悸..影響睡眠的情形。 咖啡因對有高血壓及心血管疾病的人有強心作用， 但同時也會使心跳加快，血壓增高， 亦容易引起心肌缺氧，對病情的控制不利。 懷孕的婦女過量的咖啡 會增加流產 及 胎兒發育遲緩的機會。 停經後的 婦女與老年人
@@ -960,15 +986,13 @@
                   </div>
                </div>
             </div>
-            <!-- section06 裝飾區 -->
-            <div class="menuboard"></div>
          </section>
          <!-- footer 頁尾 ---------------------------------------------------------------------------------------- -->
          <footer id="footer">
             <div class="container-fluid h-100">
                <div class="row justify-content-lg-center align-items-lg-center h-100">
-                  <div class="col-auto"><i class="fas fa-map-marker-alt mr-2"></i><span class="align-middle">新北市泰山區貴子里致遠新村55之1號</span></div>
-                  <div class="col-auto mt-1"><i class="far fa-clock mr-2"></i><span class="align-middle">營業時間：週一至週五 08:10~16:35，六、日 08:10~16:35</span></div>
+                  <div class="col-auto"><i class="fas fa-map-marker-alt mr-2 align-middle"></i><span class="align-middle">新北市泰山區貴子里致遠新村55之1號</span></div>
+                  <div class="col-auto mt-1"><i class="far fa-clock mr-2 align-middle"></i><span class="align-middle">營業時間：週一至週五 08:10~16:35，六、日 08:10~16:35</span></div>
                   <div class="col-auto mt-1"><i class="fas fa-phone mr-2 align-middle"></i><span class="align-middle">電話：（02）2901-8274</span></div>
                   <div class="col-auto mt-1">
                      <ul class="list-unstyled d-flex flex-lg-row mb-0">
@@ -987,8 +1011,7 @@
             </div>
          </footer>
          <!-- 回到頂端 -->
-         <!-- https://unicode-table.com/en/ -->
-         <div id="go_top_page" class="animate__animated animate__bounce animate__slower" style="animation-iteration-count: infinite;">
+         <div id="go_top_page" class="animated bounce" style="animation-duration: 3s;">
             <a href="#section01"><i class="fas fa-chevron-up"></i></a>
          </div>
       </div>
@@ -1008,8 +1031,14 @@
       <script src="js/wow.min.js"></script>
       <script src="js/particles.min.js"></script>
       <script src="js/particles_app.js"></script>
+      <script src="js/jquery.fittext.js"></script>
+      <script src="js/jquery.lettering.js"></script>
+      <script src="js/jquery.textillate.js"></script>
 
+      <!-- My Script -->
+      <script src="js/script.js"></script>
       <script>
+         // 視差 --------------------------------------------------------------------------------------------------
          var scene1 = document.querySelector('#scene1');
          var scene2 = document.querySelector('#scene2');
 
@@ -1022,10 +1051,10 @@
          });
 
          $('html').easeScroll({
-            animationTime: 2000
+            animationTime: 2500
          });
 
-         // 咖啡故事 section06 換圖
+         // 咖啡故事 section06 換圖 ---------------------------------------------------------------------------------
          $('#coffee1').on('click', function () {
             $('#nav-img').attr('src', 'images/section02_01.jpg');
          });
@@ -1036,84 +1065,67 @@
             $('#nav-img').attr('src', 'images/section02_03.jpg');
          });
 
-         // 回到頂端
+         // 回到頂端 Top 按鈕 ----------------------------------------------------------------------------------------
          $('#go_top_page').css({ display: 'none' });
          let nowloc = 0;
          $(window).on('scroll', function () {
             nowloc = $(window).scrollTop();
             if (nowloc > 500) {
                $('#go_top_page').fadeIn(1000);
+               $('#go_top_page').css({ 'animation-iteration-count': 3 });
             } else {
                $('#go_top_page').fadeOut(1000);
+               $('#go_top_page').css({ 'animation-iteration-count': 'none' });
             }
-         });
-         setInterval(() => {
-            if ($(window).scrollTop() === nowloc) {
-               $('#go_top_page').fadeOut(1000);
+
+            if (nowloc <= 300) {
+               $('#navbar').css({
+                  background: 'transparent',
+                  'box-shadow': 'none'
+               });
             } else {
+               $('#navbar').css({
+                  background: 'var(--coffee1)'
+               });
+            }
+
+            if (Math.floor($(window).height() + nowloc) == $(document).height()) {
+               $('#navbar').css({
+                  background: 'linear-gradient(180deg, black , black)',
+                  'box-shadow': '0 10px 10px var(--black50)'
+               });
                $('#go_top_page').fadeIn(1000);
             }
-         }, 8000);
+         });
 
-         // // loading 02
+         $('.navbar-toggler').on('click', function () {
+            $('#navbar').toggleClass('toggle_black');
+         });
+
+         // loading -------------------------------------------------------------------------------------------
          $('#content').hide();
          $(window).on('load', function () {
-            //  載入進度百分比數字
             let loadingPerc = 0;
             let loading = setInterval(() => {
-               // 載入進度百分比 100 要做的事
                if (loadingPerc >= 100) {
-                  clearInterval(loading);
                   $('#loading').fadeOut(function () {
-                     // d-flex 是 !important，必須先remove，才能加入 display none
                      $('#loading').removeClass('d-flex').css({ display: 'none' });
                   });
                   $('#content').fadeIn(2000);
-
-                  // 載入進度百分比未達 100 要做的事
+                  $('#textillate').removeClass('d-none').css({ display: 'block' });
+                  new WOW().init();
+                  clearInterval(loading);
                } else {
-                  // 每隔一段時間 loadingPerc 累加 1
                   loadingPerc += 1;
-
-                  // for bootstrap progress bar
                   $('#loading-txt').css({
                      width: loadingPerc + '%'
                   });
-                  // 改變文字內容
                   $('#loading-txt span').text(loadingPerc + '%');
                }
             }, 50);
          });
-
-         // 啟動彈出訊息框
+         // 啟動彈出訊息框 ------------------------------------------------------------------------------------------
          $('[data-toggle="tooltip"]').tooltip();
-
-         // Bootstrap 表單驗證
-         (function () {
-            'use strict';
-            window.addEventListener(
-               'load',
-               function () {
-                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                  var forms = document.getElementsByClassName('needs-validation');
-                  // Loop over them and prevent submission
-                  var validation = Array.prototype.filter.call(forms, function (form) {
-                     form.addEventListener(
-                        'submit',
-                        function (event) {
-                           if (form.checkValidity() === false) {
-                              event.preventDefault();
-                              event.stopPropagation();
-                           }
-                           form.classList.add('was-validated');
-                        },
-                        false
-                     );
-                  });
-               },
-               false
-            );
-         })();
       </script>
    </body>
 </html>

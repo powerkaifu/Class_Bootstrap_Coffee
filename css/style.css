@@ -1,20 +1,35 @@
 /* 自訂樣式 --------------------------------------------------------------------------------------------------------*/
 /* CSS 原生變數 */
 :root {
+   /* 主題色 */
    --coffee1: #000000 !important;
    --coffee2: #343a40 !important;
    --coffee3: #6c757d !important;
    --coffee4: #c7c6c6 !important;
    --coffee5: #eeeeee !important;
+
+   /* 黑色透明 */
    --black25: rgba(0, 0, 0, 0.25) !important;
    --black50: rgba(0, 0, 0, 0.5) !important;
    --black75: rgba(0, 0, 0, 0.75) !important;
+
+   /* 白色透明 */
    --white25: rgba(255, 255, 255, 0.25) !important;
    --white50: rgba(255, 255, 255, 0.5) !important;
-   --white50: rgba(255, 255, 255, 0.75) !important;
+   --white75: rgba(255, 255, 255, 0.75) !important;
+
+   /* 陰影 */
    --shadow1: 0 0 5px var(--black25) !important;
    --shadow2: 0 0 10px var(--black50) !important;
    --shadow3: 0 0 15px var(--black75) !important;
+
+   /* 內距、外距的級數 */
+   --s0: 0 !important;
+   --s1: 0.25rem !important;
+   --s2: 0.5rem !important;
+   --s3: 1rem !important;
+   --s4: 1.5rem !important;
+   --s5: 3rem !important;
 }
 
 /* 自訂按鈕 */
@@ -53,7 +68,6 @@
 .show > .btn-coffee.dropdown-toggle:focus {
    box-shadow: var(--shadow1);
 }
-
 /* body  --------------------------------------------------------------------------------------------------------*/
 body {
    font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
@@ -62,9 +76,15 @@ body {
 
 /* 導覽列 -------------------------------------------------------------------------------------------------------*/
 #navbar {
-   background: linear-gradient(180deg, black 40%, transparent);
-   transition: 0.3s;
+   background: var(--coffee1);
+   padding: var(--s1) 0;
+   transition: background-color 0.5s ease;
 }
+
+#coffee-navbar .nav-link i {
+   margin-right: var(--s1);
+}
+
 /* section01 輪播圖 ---------------------------------------------------------------------------------------------*/
 .carousel-control-prev,
 .carousel-control-next {
@@ -80,7 +100,7 @@ body {
    opacity: 1;
 }
 
-/* 輪播圖放大 */
+/* 輪播圖放大動畫 */
 .img-scale {
    animation: img-scale 20s 1s 1 ease forwards;
 }
@@ -115,80 +135,81 @@ body {
 #section06 {
    position: relative;
    overflow: hidden;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 /* section01 輪播圖(頂端) ----------------------------------------------------------------------------------------*/
-#section01 {
-   padding-top: 60px;
-}
 
 /* 575px 最小尺寸，登入、註冊區會呈現水平顯示  */
-.login {
+#login_menu {
    display: flex;
    flex-direction: row;
 }
 
-/* section02 咖啡餐飲 --------------------------------------------------------------------------------------------*/
+/* section02 菜單餐點 --------------------------------------------------------------------------------------------*/
 #section02 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
    background: var(--coffee4);
 }
 
 #section02 .container {
-   padding: 1rem;
    background: var(--coffee4);
 }
 
 #section02 .container h1 {
    text-align: center;
+   padding-top: 4rem;
+   margin-bottom: var(--s0);
    color: var(--coffee1);
 }
 
+#section02 > .container > .row {
+   padding: var(--s2);
+}
+
+#section02 .col-lg-3 {
+   padding-left: var(--s2);
+   padding-right: var(--s2);
+   margin-bottom: var(--s3);
+}
+
+/* list-group */
 #section02 .list-group {
-   font-size: 1rem;
-   margin: 1rem 0;
+   margin: var(--s3) 0;
+   margin-bottom: var(--s4);
 }
 
 #section02 .list-group-flush > .list-group-item:last-child {
    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-#section02 .list-group .list-group-item {
-   margin-bottom: -1px;
-}
-
 #section02 .list-group .nav-link {
    color: var(--coffee2);
-   padding: 0.5rem;
+   padding: var(--s2);
    transition: 0.3s;
 }
 
 #section02 .nav-item.active {
    color: var(--coffee2);
    background: var(--coffee4);
-   border: 3px inset var(--coffee5);
+   border: var(--s1) inset var(--coffee5);
 }
 
-#section02 .col-lg-3 {
-   padding-left: 5px;
-   padding-right: 5px;
-   margin-bottom: 1rem;
-}
-
+/* card */
 #section02 .card {
    transition: 0.3s;
-   border: 5px double var(--coffee5) !important;
+   border: 5px solid var(--coffee5) !important;
+   box-shadow: 0 0 0 1px var(--coffee4);
    height: 100%;
 }
 #section02 .card:hover {
    transform: translateY(-1rem);
-   border: 5px double var(--coffee5) !important;
 }
 
 #section02 .card-body {
-   padding: 0.5rem;
+   padding: var(--s2);
    height: 100%;
    display: flex;
    flex-direction: column;
@@ -205,30 +226,26 @@ body {
 
 /* section03 周邊景點 --------------------------------------------------------------------------------------------*/
 #section03 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-#section03 .container {
-   padding: 1rem;
+   padding-bottom: var(--s4);
 }
 
 #section03 h1 {
    text-align: center;
-   padding-bottom: 0.5rem;
+   padding-top: var(--s5);
+   margin: var(--s3) 0;
    color: var(--coffee5);
 }
 
 #section03 > .container > .row {
-   background: var(--coffee4);
-   padding: 1rem 1rem 0 1rem;
+   background: var(--black50);
+   padding: var(--s2);
+   padding-top: var(--s4);
 }
 
 #section03 .col-lg-3 {
-   padding-left: 10px;
-   padding-right: 10px;
-   margin-bottom: 1rem;
+   padding-left: var(--s2);
+   padding-right: var(--s2);
+   margin-bottom: var(--s3);
 }
 
 #section03 .view {
@@ -236,17 +253,24 @@ body {
    overflow: hidden;
 }
 
+#section03 .view img {
+   transform-origin: center center;
+   transition: 0.5s;
+}
+
 #section03 .view .text {
    color: white;
-   background-color: rgba(0, 0, 0, 0.2);
-   text-align: center;
-   padding: 0 1rem;
+   background-color: var(--black50);
+   padding: 0 var(--s3);
+
+   /* 文字是絕對定位會在圖片的上層 */
    position: absolute;
    top: 0;
    bottom: 0;
    left: 0;
    right: 0;
 
+   /* 彈性盒對齊 .text 的彈性項目 h4、p */
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -254,9 +278,8 @@ body {
    transition: 1s;
 }
 
-#section03 .view img {
-   transform-origin: center center;
-   transition: 1s;
+#section03 .text p {
+   display: none;
 }
 
 #section03 .view:hover img {
@@ -264,17 +287,10 @@ body {
 }
 
 #section03 .view:hover .text {
-   background-color: rgba(0, 0, 0, 0.6);
+   background-color: var(--black75);
 }
 
 /* section04 莊園位置 --------------------------------------------------------------------------------------------*/
-#section04 {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
 #section04 .embed-responsive {
    position: absolute;
    filter: brightness(50%);
@@ -313,7 +329,6 @@ body {
    position: relative;
 }
 
-/* 處理 card 之間 1px 誤差...暫時  */
 #section04 .accordion .card {
    margin-top: -1px;
 }
@@ -363,9 +378,6 @@ body {
 
 /* section05 聯絡我們 --------------------------------------------------------------------------------------------*/
 #section05 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
    color: var(--coffee2);
    background: var(--coffee4);
    padding: 2rem 0;
@@ -377,6 +389,7 @@ body {
 
 #section05 h1 {
    text-align: center;
+   padding-top: 2.5rem;
    padding-bottom: 0.5rem;
 }
 
@@ -432,29 +445,44 @@ option:checked {
 
 /* section06 咖啡故事 --------------------------------------------------------------------------------------------*/
 #section06 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
    padding: 2rem 0;
+}
+
+#section06 h1 {
+   text-align: center;
+   padding-top: var(--s5);
+   padding-bottom: var(--s2);
+   color: var(--coffee5);
+}
+
+#section06 a.nav-link {
+   color: var(--coffee5);
+   border: 1px solid transparent;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   transition: 0.3s;
+}
+
+#section06 a.nav-link:hover {
+   color: var(--coffee5);
+   background-color: var(--coffee1);
+}
+
+/* active 狀態 */
+#section06 .nav-link.active {
+   color: var(--coffee5);
+   background: var(--coffee1);
+}
+
+/* 沒有 active 狀態的... */
+#section06 .nav-link:not(.active) {
+   background: var(--coffee5);
+   color: var(--coffee1);
 }
 
 #section06 #nav-img {
    box-shadow: var(--shadow3);
 }
-
-#section06 a {
-   color: var(--coffee5);
-}
-
-#section06 a:hover {
-   color: var(--coffee1);
-   background: var(--coffee5);
-}
-
-#section06 a.active {
-   color: var(--coffee1);
-}
-
 /* #footer ------------------------------------------------------------------------------------------------------*/
 #footer {
    color: var(--coffee5);
@@ -466,21 +494,35 @@ option:checked {
 /* 裝置斷點控制區 -------------------------------------------------------------------------------------------------*/
 /* xs 575 以下*/
 @media (max-width: 575px) {
-   /* 粒子，若怕影響視覺，可以在此尺寸關閉 */
    #particles-js {
       width: 100vw;
       height: 100vh;
    }
 
-   #navbar {
-      background: var(--coffee1);
+   #main_menu.navbar-nav {
+      padding-left: var(--s3);
    }
 
-   /* secttion06 */
+   #login_menu.navbar-nav {
+      padding-left: var(--s3);
+      padding-bottom: var(--s2);
+   }
+
+   /* 輪播圖長高 */
+   #section01 {
+      height: 330px;
+   }
+
+   #textillate {
+      display: none;
+   }
 }
 
 /* lg 992 以上 */
 @media (min-width: 992px) {
+   #navbar {
+      background: transparent;
+   }
    #section01,
    #section02,
    #section03,
@@ -490,28 +532,48 @@ option:checked {
       height: 100vh;
    }
 
-   /* section02 ------------------------------------------------------------------- */
+   /* 992 section01 ------------------------------------------------------------------- */
+   #section01 {
+      padding-top: 0px;
+   }
+   /* 992 section02 ------------------------------------------------------------------- */
    #section02 .container {
       background: none;
       padding: 0;
    }
 
+   #section02 .container h1 {
+      padding-top: var(--s5);
+      padding-bottom: var(--s4);
+      color: var(--coffee1);
+   }
+
    #section02 > .container > .row {
       background-color: var(--white50);
-      padding: 1rem 0.6rem 0 0;
+      padding-top: var(--s4);
+      border-radius: 1rem;
       box-shadow: var(--shadow2);
    }
 
-   /* section03 ------------------------------------------------------------------- */
-   #section03 {
-      background: none;
-   }
-   #section03 > .container > .row {
-      background-color: var(--black50);
-      padding: 1.5rem 2rem 0;
+   #section02 .list-group {
+      margin: var(--s0);
    }
 
-   /* section04 ------------------------------------------------------------------- */
+   /* 992 section03 ------------------------------------------------------------------- */
+   #section03 .container h1 {
+      padding-bottom: var(--s4);
+   }
+
+   #section03 > .container > .row {
+      border-radius: 1rem;
+      box-shadow: var(--shadow3);
+   }
+
+   #section03 .text p {
+      display: block;
+   }
+
+   /* 992 section04 ------------------------------------------------------------------- */
    #section04 .infomation .accordion {
       width: 40%;
    }
@@ -520,7 +582,7 @@ option:checked {
       align-items: flex-end;
    }
 
-   /* section05 */
+   /* 992 section05 ------------------------------------------------------------------- */
    #section05 h5 {
       font-size: 1.6rem;
       text-align: left;
@@ -533,42 +595,17 @@ option:checked {
 }
 
 /* 其他功能 -------------------------------------------------------------------------------------------------------------*/
-/* scrollpage.js 滑動 */
-/* 導覽列標籤 nav 必須修改成 header，不然滑動會不正常 */
-header {
-   will-change: transform;
-   transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
-   transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
-   transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
-   transform: translateY(0);
-   -webkit-transform: translateY(0);
-}
-
-/* 往下滑動可以隱藏選單，移除就變成固定 navbar */
-/* .hide-nav {
-   transform: translateY(-120%) !important;
-   -webkit-transform: translateY(-120%) !important;
-} */
-
 /* 選單滑動底線效果 */
 ul.menu-left {
-   /* -webkit-transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;
-   -ms-transition: all 0.3s ease-out;
-   -o-transition: all 0.3s ease-out; */
    transition: all 0.3s ease-out;
 }
 .menu-left a {
-   /* 轉場只需要內容寬度 */
    display: inline-block;
    position: relative;
-   /* 底線間距 */
    padding-bottom: 0.5rem;
-   /* 連結文字顏色轉場 */
    transition: color 0.35s ease;
 }
 
-/* before 沒有寬度，只有高度 1px，且對齊左下角，背景目前為透明色 */
 .menu-left a:before {
    content: '';
    width: 0;
@@ -579,15 +616,11 @@ ul.menu-left {
    transition: width 0.35s ease;
 }
 
-/* 轉場效果，滑鼠移上 before，寬度從 0 變長 100%（對齊左下角，由左至右） */
-/* 背景其實已經先填滿整個父層寬度，但因為沒有寬度，看不到白色背景，當發生轉場時，寬度會慢慢變長，漸漸顯示白色背景 */
-/* 回場效果，滑鼠移開時，寬度由 100% => 0%，但因為回場也只有寬度，背景在回場一開始時就會直接透明，所以會有瞬間不見的視覺 */
 .menu-left a:hover:before {
    width: 100%;
    background: #fff;
 }
 
-/* after 沒有寬度，只有高度 1px，且對齊右下角，且填滿高度 1px 白色背景，但因為沒有寬度所以看不到白色背景 */
 .menu-left a:after {
    content: '';
    width: 0;
@@ -599,28 +632,10 @@ ul.menu-left {
    transition: width 0.35s ease;
 }
 
-/* 轉場效果，滑鼠移上 after，寬度會從 0 變成 100%（對齊右下角，由右至左），而顏色從白色瞬間變成透明，也就是沒有轉場效果 */
-/* 回場效果，滑鼠放開時，一樣只有寬度做回場，此時寬度是 100%，100% => 0，也就是會看到透明會漸漸吃掉白色的視覺 */
 .menu-left a:hover:after {
    width: 100%;
    background: transparent;
 }
-
-/* 第二種選單滑動效果 */
-/* .menu-left a:before {
-   content: '';
-   border-bottom: 1px solid #fff;
-   position: absolute;
-   bottom: 0;
-   left: 100%;
-   right: 100%;
-   transition: 0.5s;
-}
-
-.menu-left a:hover:before {
-   left: 0;
-   right: 0;
-} */
 
 /* loading 載入 */
 #loading {
@@ -657,6 +672,7 @@ ul.menu-left {
    text-decoration: none;
 }
 
+/* tooltip */
 /* 彈出訊息框背景顏色 */
 .bs-tooltip-top .arrow::before,
 .bs-tooltip-auto[x-placement^='top'] .arrow::before {
@@ -687,10 +703,64 @@ ul.menu-left {
 #login .modal-content,
 #register .modal-content {
    box-shadow: var(--shadow3);
+   padding: var(--s3);
+}
+
+#login .modal-header,
+#register .modal-header {
+   padding: var(--s0);
 }
 
 #login input.form-control:focus,
 #register input.form-control:focus {
-   border: var(--coffee3);
+   border-color: var(--coffee3);
    box-shadow: var(--shadow2);
+}
+
+.toggle_black {
+   background: var(--coffee1) !important;
+}
+
+/* 視差 */
+#scene1 {
+   width: 100%;
+   height: 100%;
+}
+
+#scene2 {
+   width: 100%;
+   height: 100%;
+}
+
+.layer {
+   width: 100% !important;
+   height: 100% !important;
+}
+
+.bg1 {
+   background: url(../images/parallax_01.jpg) no-repeat center/cover;
+}
+
+.bg2 {
+   background: url(../images/parallax_02.jpg) no-repeat center/cover;
+}
+
+.bleed {
+   position: absolute;
+   top: -5%;
+   left: -5%;
+   top: -5%;
+   bottom: -5%;
+   width: 120%;
+   height: 120%;
+}
+
+#textillate {
+   position: absolute;
+   z-index: 999;
+   color: white;
+   font-size: 2rem;
+   width: 50%;
+   text-align: center;
+   background: linear-gradient(270deg, transparent, rgba(59, 24, 0, 0.3), transparent) !important;
 }

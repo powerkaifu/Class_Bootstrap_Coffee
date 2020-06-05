@@ -1,23 +1,15 @@
-// NAVIGATION LOGO SCROLL TOP
-// $('.logo').on('click', function (e) {
-//    e.preventDefault();
-//    $('.nav-toggle').removeClass('open');
-//    $('.menu-left').removeClass('collapse');
-//    $('html, body').animate(
-//       {
-//          scrollTop: 0
-//       },
-//       2000,
-//       'easeInOutBack'
-//    );
-// });
-
 // LINKS TO ANCHORS
+// https://abgne.tw/jquery/apply-jquery/jquery-scroll-to-page-top.html
+// jQuery 已經把控制捲軸的部份包裝成 .scrollTop() 及 .scrollLeft() 兩函式，它們能把捲軸移動到指定的位置。
+// 不過若實際測試效果時會發現它是直接就跳到定點，這樣感覺比較唐突。所以接下來咱們就改用 .animate() 的方式來做出動畫式的移動吧
+// scrollTop 雖然在 jQuery 中是一個函式，但它其實也是 DOM 物件的一個屬性，因此我們就能利用改變 scrollTop 值的方式來達到動畫的效果了。
+
 $('a[href^="#"]').on('click', function (event) {
-   var $target = $(this.getAttribute('href'));
+   let $target = $(this.getAttribute('href'));
    if ($target.length) {
-      // event.preventDefault();
-      $('html, body').animate(
+      // 不會執行默認的動作，也就是不會再執行「連結到某個網址」這個動作
+      //  event.preventDefault();
+      $('html, body').stop().animate(
          {
             scrollTop: $target.offset().top
          },
@@ -26,56 +18,3 @@ $('a[href^="#"]').on('click', function (event) {
       );
    }
 });
-
-// TOGGLE HAMBURGER & COLLAPSE NAV
-// $('.nav-toggle').on('click', function () {
-//    $(this).toggleClass('open');
-//    $('.menu-left').toggleClass('collapse');
-// });
-// // REMOVE X & COLLAPSE NAV ON ON CLICK
-// $('.menu-left a').on('click', function () {
-//    $('.nav-toggle').removeClass('open');
-//    $('.menu-left').removeClass('collapse');
-// });
-
-// SHOW/HIDE NAV
-
-// Hide Header on on scroll down
-// var didScroll;
-// var lastScrollTop = 0;
-// var delta = 5;
-// var navbarHeight = $('header').outerHeight();
-
-// $(window).scroll(function (event) {
-//    didScroll = true;
-// });
-
-// setInterval(function () {
-//    if (didScroll) {
-//       hasScrolled();
-//       didScroll = false;
-//    }
-// }, 250);
-
-// function hasScrolled() {
-//    var st = $(this).scrollTop();
-
-//    // Make sure they scroll more than delta
-//    if (Math.abs(lastScrollTop - st) <= delta) return;
-
-//    // If they scrolled down and are past the navbar, add class .nav-up.
-//    // This is necessary so you never see what is "behind" the navbar.
-//    if (st > lastScrollTop && st > navbarHeight) {
-//       // Scroll Down
-//       $('header').removeClass('show-nav').addClass('hide-nav');
-//       $('.nav-toggle').removeClass('open');
-//       $('.menu-left').removeClass('collapse');
-//    } else {
-//       // Scroll Up
-//       if (st + $(window).height() < $(document).height()) {
-//          $('header').removeClass('hide-nav').addClass('show-nav');
-//       }
-//    }
-
-//    lastScrollTop = st;
-// }
