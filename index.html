@@ -30,7 +30,6 @@
             </div>
          </div>
       </div>
-
       <!-- content -->
       <div id="content">
          <!-- 導覽列區 ------------------------------------------------------------------------------------------- -->
@@ -43,7 +42,6 @@
                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- #coffee-navbar 下拉摺疊選單以及監聽滑動使用 -->
             <div id="coffee-navbar" class="collapse navbar-collapse justify-content-lg-end">
                <!-- .menu-left 連結底線滑動效果 -->
                <ul id="main_menu" class="navbar-nav menu-left">
@@ -1044,8 +1042,6 @@
          var parallax2 = new Parallax(scene2);
 
          // 阻止最小尺寸時，點選輪播圖左、右按鈕，往上移動 --------------------------------------------------------------
-         // 阻止 咖啡故事按下 tab 按鈕，跳回頂部
-         // preventDefault() 方法阻止元素發生默認的行為（例如，當點擊提交按鈕時阻止對錶單的提交）。
          $('.carousel-control-prev,.carousel-control-next,#btn-login,#btn-register,[data-toggle="pill"],[data-toggle="tab"]').on('click', function (event) {
             event.preventDefault();
             $('html, body').stop();
